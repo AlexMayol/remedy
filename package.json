@@ -1,0 +1,24 @@
+{
+  "name": "remedy",
+  "version": "1.0.0",
+  "description": "A CSS framework based on responsie font size and rem/em units.",
+  "main": "remedy.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "css",
+    "sass",
+    "framework",
+    "rem",
+    "em",
+    "font-size",
+    "adaptative",
+    "responsive"
+  ],
+  "author": "Alex Mayol",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.7.2"
+  }
+}
