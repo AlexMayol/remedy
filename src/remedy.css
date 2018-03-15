@@ -13,5 +13,7 @@
 }
 @import './normalize.css';
 @import './font-size.css';
+@import './flex.sass';
+@import './loaders.css';
 @import './utils.sass';
 @import './buttons.sass';
