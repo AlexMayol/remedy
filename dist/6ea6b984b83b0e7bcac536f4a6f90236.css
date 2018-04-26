@@ -22,6 +22,7 @@
   
   body {
     margin: 0;
+    padding: 0;
   }
   
   /**
@@ -338,12 +339,17 @@
   
   [hidden] {
     display: none;
-  }@media screen and (max-width: 1024px) {
+  }/*@media screen and (max-width: 1024px) {
     :root{
       font-size: calc(20px + -8 * ((100vw - 320px) / 960));
     }
   }
-  .flex {
+  */
+  @media screen and (max-width:43rem){
+   body{
+    
+   }
+  }.flex {
   display: flex; }
 
 .f-column {
@@ -979,9 +985,92 @@
   border-radius: var(--border-radius);
   color: var(--text);
   background-color: var(--color2);
-  padding: 1em;
-  font-size: 1rem; }
-:root {
+  padding: 10em;
+  font-size: 10rem; }
+.warning {
+  border: 1px solid pink;
+  background: rgba(255,0,0,0.1);
+  padding: 2rem;
+  margin: 2rem 4rem 8rem 7rem;
+  font-family: georgia, serif;
+  line-height: 1.2;
+}
+@supports (display: grid) {
+  .warning {
+    display: none;
+  }
+}
+.grid{
+  display: grid;
+  grid-gap: .5rem;
+  grid-template-columns: 1rem 1fr 1fr 1rem;
+  grid-template-rows: 50vh auto auto auto;
+  grid-template-areas: 
+  "header header header header"
+  ". aside aside ."
+  ". main main ."
+  "footer footer footer footer"
+  ;
+}
+
+@media screen and (min-width:70rem){
+  .grid{
+    display: grid;
+    grid-gap: .5rem;
+    grid-template-columns: 1rem 20rem 1fr 20rem 1rem;
+    grid-template-rows: 100vh auto auto;
+    grid-template-areas: 
+    "header header header header header"
+    ". main main aside ."
+    "footer footer footer footer footer"
+    ;
+  }
+
+}
+.header{
+  grid-area: header;
+}
+.main{
+  grid-area: main;
+}
+.aside{
+  grid-area:aside;
+}
+.footer{
+  grid-area: footer;
+}
+
+.grid div:nth-child(even){
+  background-color: brown
+}
+.grid div:nth-child(odd){
+  background-color: olivedrab
+}.img-cover{
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}.relative{
+    position: relative;
+}
+.absolute-center{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}.gal img{
+    max-width: 12rem;
+    padding: .5rem;
+}
+.gal{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+}
+*{
+    transition: all .2s ease-in-out;
+}:root {
     /*--color1: #E4EDDB; 
     --color2: #307672; 
     --color3:#144D53; 
@@ -993,4 +1082,7 @@
 
     --border-radius:4px;
     --text:white;
+}
+a:not([rel="noopener"]){
+    color:red;
 }

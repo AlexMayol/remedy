@@ -17,3 +17,11 @@
 @import './loaders.css';
 @import './utils.sass';
 @import './buttons.sass';
+@import './grid.css';
+@import './images.css';
+@import './position.css';
+a:not([rel="noopener"]){
+    color:red;
+}
+
+@import './tests.css';
