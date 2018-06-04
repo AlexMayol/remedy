@@ -1,1 +1,0 @@
-{"version":3,"sources":["code.js"],"names":["Vue","el"],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA,IAAIA,GAAJ,CAAQ;AACNC,MAAG;AADG,CAAR","file":"76037fa0c71bae5026bb0c0a388b67fb.map","sourcesContent":["new Vue({\r\n  el:'.main'\r\n})\r\n  \r\n"]}

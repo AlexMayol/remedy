@@ -1,0 +1,7 @@
+.img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/*todo:filters sepia, opacity, blur...  http://html5-demos.appspot.com/static/css/filters/index.html  */

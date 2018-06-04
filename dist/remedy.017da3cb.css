@@ -1,0 +1,1320 @@
+ html {
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+  }
+  
+  body {
+    margin: 0;
+  }
+
+  
+  pre {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+  }
+  
+
+  a {
+    background-color: transparent;
+  }
+  
+  abbr[title] {
+    border-bottom: none; /* 1 */
+    text-decoration: underline; /* 2 */
+    text-decoration: underline dotted; /* 2 */
+  }
+  
+  b,
+  strong {
+    font-weight: bolder;
+  }
+  
+  code,
+  kbd,
+  samp {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+  }
+  
+  small {
+    font-size: 80%;
+  }
+  
+  sub,
+  sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  
+  sub {
+    bottom: -0.25em;
+  }
+  
+  sup {
+    top: -0.5em;
+  }:root {
+  font-size: 100%;
+  --bg-color: coral;
+  --text-color: black;
+  --link-color: blue;
+  --border-radius-sm: 2px;
+  --border-radius-md: 4px;
+  --border-radius-lg: 6px;
+
+
+  /*----Headings----*/
+  --h1-size:2.5rem;
+  --h2-size:2rem;
+  --h3-size:1.75rem;
+  --h4-size:1.5rem;
+  --h5-size:1.25rem;
+  --h6-size:1rem;
+
+  --h1-color: green;
+  --h2-color: green;
+  --h3-color: green;
+  --h4-color: green;
+  --h5-color: green;
+  --h6-color: green;
+
+  --h1-margin: 1rem 0;
+  --h2-margin: 1rem 0;
+  --h3-margin: 1rem 0;
+  --h4-margin: 1rem 0;
+  --h5-margin: 1rem 0;
+  --h6-margin: 1rem 0;
+
+  /*-----Grid------*/
+  --container-width:90%;
+  --grid-gap:1.5rem;
+
+  /*-----Other-------*/
+  --selection-color: white;
+  --selection-bg:red;
+
+}
+
+::selection {
+  color:var(--selection-color);
+  background: var(--selection-color); /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  color:var(--selection-color);
+  background:var(--selection-color);/* Gecko Browsers */
+}.container {
+  margin: 0 auto;
+  max-width: 70rem;
+  width:var(--container-width);
+  background-color: aqua;
+}
+
+
+@supports (display:grid) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: 200px;
+    grid-gap: var(--grid-gap);
+  }
+  [class^="col-"] {
+    background-color: brown;
+  }
+  .col-1 {
+    grid-column: auto/span 1;
+  }
+  .col-2 {
+    grid-column: auto/span 2;
+  }
+  .col-3 {
+    grid-column: auto/span 3;
+  }
+  .col-4 {
+    grid-column: auto/span 4;
+  }
+  .col-5 {
+    grid-column: auto/span 5;
+  }
+  .col-6 {
+    grid-column: auto/span 6;
+  }
+  .col-7 {
+    grid-column: auto/span 7;
+  }
+  .col-8 {
+    grid-column: auto/span 8;
+  }
+  .col-9 {
+    grid-column: auto/span 9;
+  }
+  .col-10 {
+    grid-column: auto/span 10;
+  }
+  .col-11 {
+    grid-column: auto/span 11;
+  }
+  .col-12 {
+    grid-column: auto/span 12;
+  }
+}.m0 {
+    margin: 0;
+}
+
+.mt0 {
+    margin-top: 0;
+}
+
+.mt025 {
+    margin-top: .25rem;
+}
+
+.mt05 {
+    margin-top: .5rem;
+}
+
+.mt075 {
+    margin-top: .75rem;
+}
+
+.mt1 {
+    margin-top: 1rem;
+}
+
+.mt125 {
+    margin-top: 1.25rem;
+}
+
+.mt15 {
+    margin-top: 1.5rem;
+}
+
+.mt175 {
+    margin-top: 1.75rem;
+}
+
+.mt2 {
+    margin-top: 2rem;
+}
+
+.mt3 {
+    margin-top: 3rem
+}
+
+.mt4 {
+    margin-top: 4rem;
+}
+
+.mt5 {
+    margin-top: 5rem;
+}
+
+.mt6 {
+    margin-top: 6rem;
+}
+
+.mt7 {
+    margin-top: 7rem;
+}
+
+.mt8 {
+    margin-top: 8rem;
+}
+
+.mt9 {
+    margin-top: 9rem;
+}
+
+.mr0 {
+    margin-right: 0;
+}
+
+.mr025 {
+    margin-right: .25rem;
+}
+
+.mr05 {
+    margin-right: .5rem;
+}
+
+.mr075 {
+    margin-right: .75rem;
+}
+
+.mr1 {
+    margin-right: 1rem;
+}
+
+.mr125 {
+    margin-right: 1.25rem;
+}
+
+.mr15 {
+    margin-right: 1.5rem;
+}
+
+.mr175 {
+    margin-right: 1.75rem;
+}
+
+.mr2 {
+    margin-right: 2rem;
+}
+
+.mr3 {
+    margin-right: 3rem
+}
+
+.mr4 {
+    margin-right: 4rem;
+}
+
+.mr5 {
+    margin-right: 5rem;
+}
+
+.mr6 {
+    margin-right: 6rem;
+}
+
+.mr7 {
+    margin-right: 7rem;
+}
+
+.mr8 {
+    margin-right: 8rem;
+}
+
+.mr9 {
+    margin-right: 9rem;
+}
+
+.mb0 {
+    margin-bottom: 0;
+}
+
+.mb025 {
+    margin-bottom: .25rem;
+}
+
+.mb05 {
+    margin-bottom: .5rem;
+}
+
+.mb075 {
+    margin-bottom: .75rem;
+}
+
+.mb1 {
+    margin-bottom: 1rem;
+}
+
+.mb125 {
+    margin-bottom: 1.25rem;
+}
+
+.mb15 {
+    margin-bottom: 1.5rem;
+}
+
+.mb175 {
+    margin-bottom: 1.75rem;
+}
+
+.mb2 {
+    margin-bottom: 2rem;
+}
+
+.mb3 {
+    margin-bottom: 3rem
+}
+
+.mb4 {
+    margin-bottom: 4rem;
+}
+
+.mb5 {
+    margin-bottom: 5rem;
+}
+
+.mb6 {
+    margin-bottom: 6rem;
+}
+
+.mb7 {
+    margin-bottom: 7rem;
+}
+
+.mb8 {
+    margin-bottom: 8rem;
+}
+
+.mb9 {
+    margin-bottom: 9rem;
+}
+
+.ml0 {
+    margin-left: 0;
+}
+
+.ml025 {
+    margin-left: .25rem;
+}
+
+.ml05 {
+    margin-left: .5rem;
+}
+
+.ml075 {
+    margin-left: .75rem;
+}
+
+.ml1 {
+    margin-left: 1rem;
+}
+
+.ml125 {
+    margin-left: 1.25rem;
+}
+
+.ml15 {
+    margin-left: 1.5rem;
+}
+
+.ml175 {
+    margin-left: 1.75rem;
+}
+
+.ml2 {
+    margin-left: 2rem;
+}
+
+.ml3 {
+    margin-left: 3rem
+}
+
+.ml4 {
+    margin-left: 4rem;
+}
+
+.ml5 {
+    margin-left: 5rem;
+}
+
+.ml6 {
+    margin-left: 6rem;
+}
+
+.ml7 {
+    margin-left: 7rem;
+}
+
+.ml8 {
+    margin-left: 8rem;
+}
+
+.ml9 {
+    margin-left: 9rem;
+}
+
+.mtb0 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.mtb025 {
+    margin-top: .25rem;
+    margin-bottom: .25rem;
+}
+
+.mtb05 {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.mtb075 {
+    margin-top: .75rem;
+    margin-bottom: .75rem;
+}
+
+.mtb1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.mtb2 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.mtb3 {
+    margin-top: 3;
+    margin-bottom: 3rem;
+}
+
+.mtb4 {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.mtb5 {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.mtb6 {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+.mtb7 {
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+}
+
+.mtb8 {
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+}
+
+.mtb9 {
+    margin-top: 9rem;
+    margin-bottom: 9rem;
+}
+
+.mlr0 {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.mlr025 {
+    margin-left: .25rem;
+    margin-right: .25rem;
+}
+
+.mlr05 {
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
+.mlr075 {
+    margin-left: .75rem;
+    margin-right: .75rem;
+}
+
+.mlr1 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.mlr2 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.mlr3 {
+    margin-left: 3;
+    margin-right: 3rem;
+}
+
+.mlr4 {
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+.mlr5 {
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.mlr6 {
+    margin-left: 6rem;
+    margin-right: 6rem;
+}
+
+.mlr7 {
+    margin-left: 7rem;
+    margin-right: 7rem;
+}
+
+.mlr8 {
+    margin-left: 8rem;
+    margin-right: 8rem;
+}
+
+.mlr9 {
+    margin-left: 9rem;
+    margin-right: 9rem;
+}
+
+.p0 {
+    padding: 0;
+}
+
+.pt0 {
+    padding-top: 0;
+}
+
+.pt025 {
+    padding-top: .25rem;
+}
+
+.pt05 {
+    padding-top: .5rem;
+}
+
+.pt075 {
+    padding-top: .75rem;
+}
+
+.pt1 {
+    padding-top: 1rem;
+}
+
+.pt125 {
+    padding-top: 1.25rem;
+}
+
+.pt15 {
+    padding-top: 1.5rem;
+}
+
+.pt175 {
+    padding-top: 1.75rem;
+}
+
+.pt2 {
+    padding-top: 2rem;
+}
+
+.pt3 {
+    padding-top: 3rem
+}
+
+.pt4 {
+    padding-top: 4rem;
+}
+
+.pt5 {
+    padding-top: 5rem;
+}
+
+.pt6 {
+    padding-top: 6rem;
+}
+
+.pt7 {
+    padding-top: 7rem;
+}
+
+.pt8 {
+    padding-top: 8rem;
+}
+
+.pt9 {
+    padding-top: 9rem;
+}
+
+.pr0 {
+    padding-right: 0;
+}
+
+.pr025 {
+    padding-right: .25rem;
+}
+
+.pr05 {
+    padding-right: .5rem;
+}
+
+.pr075 {
+    padding-right: .75rem;
+}
+
+.pr1 {
+    padding-right: 1rem;
+}
+
+.pr125 {
+    padding-right: 1.25rem;
+}
+
+.pr15 {
+    padding-right: 1.5rem;
+}
+
+.pr175 {
+    padding-right: 1.75rem;
+}
+
+.pr2 {
+    padding-right: 2rem;
+}
+
+.pr3 {
+    padding-right: 3rem
+}
+
+.pr4 {
+    padding-right: 4rem;
+}
+
+.pr5 {
+    padding-right: 5rem;
+}
+
+.pr6 {
+    padding-right: 6rem;
+}
+
+.pr7 {
+    padding-right: 7rem;
+}
+
+.pr8 {
+    padding-right: 8rem;
+}
+
+.pr9 {
+    padding-right: 9rem;
+}
+
+.pb0 {
+    padding-bottom: 0;
+}
+
+.pb025 {
+    padding-bottom: .25rem;
+}
+
+.pb05 {
+    padding-bottom: .5rem;
+}
+
+.pb075 {
+    padding-bottom: .75rem;
+}
+
+.pb1 {
+    padding-bottom: 1rem;
+}
+
+.pb125 {
+    padding-bottom: 1.25rem;
+}
+
+.pb15 {
+    padding-bottom: 1.5rem;
+}
+
+.pb175 {
+    padding-bottom: 1.75rem;
+}
+
+.pb2 {
+    padding-bottom: 2rem;
+}
+
+.pb3 {
+    padding-bottom: 3rem
+}
+
+.pb4 {
+    padding-bottom: 4rem;
+}
+
+.pb5 {
+    padding-bottom: 5rem;
+}
+
+.pb6 {
+    padding-bottom: 6rem;
+}
+
+.pb7 {
+    padding-bottom: 7rem;
+}
+
+.pb8 {
+    padding-bottom: 8rem;
+}
+
+.pb9 {
+    padding-bottom: 9rem;
+}
+
+.pl0 {
+    padding-left: 0;
+}
+
+.pl025 {
+    padding-left: .25rem;
+}
+
+.pl05 {
+    padding-left: .5rem;
+}
+
+.pl075 {
+    padding-left: .75rem;
+}
+
+.pl1 {
+    padding-left: 1rem;
+}
+
+.pl125 {
+    padding-left: 1.25rem;
+}
+
+.pl15 {
+    padding-left: 1.5rem;
+}
+
+.pl175 {
+    padding-left: 1.75rem;
+}
+
+.pl2 {
+    padding-left: 2rem;
+}
+
+.pl3 {
+    padding-left: 3rem
+}
+
+.pl4 {
+    padding-left: 4rem;
+}
+
+.pl5 {
+    padding-left: 5rem;
+}
+
+.pl6 {
+    padding-left: 6rem;
+}
+
+.pl7 {
+    padding-left: 7rem;
+}
+
+.pl8 {
+    padding-left: 8rem;
+}
+
+.pl9 {
+    padding-left: 9rem;
+}
+
+.ptb0 {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.ptb025 {
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+}
+
+.ptb05 {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+.ptb075 {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+}
+
+.ptb1 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.ptb2 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.ptb3 {
+    padding-top: 3;
+    padding-bottom: 3rem;
+}
+
+.ptb4 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.ptb5 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.ptb6 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.ptb7 {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+.ptb8 {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+.ptb9 {
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+}
+
+.plr0 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.plr025 {
+    padding-left: .25rem;
+    padding-right: .25rem;
+}
+
+.plr05 {
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+
+.plr075 {
+    padding-left: .75rem;
+    padding-right: .75rem;
+}
+
+.plr1 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.plr2 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.plr3 {
+    padding-left: 3;
+    padding-right: 3rem;
+}
+
+.plr4 {
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+.plr5 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.plr6 {
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+
+.plr7 {
+    padding-left: 7rem;
+    padding-right: 7rem;
+}
+
+.plr8 {
+    padding-left: 8rem;
+    padding-right: 8rem;
+}
+
+.plr9 {
+    padding-left: 9rem;
+    padding-right: 9rem;
+}/*!
+* Revenge CSS v 1.0 
+* Copyright 2013, Heydon Pickering: http://www.heydonworks.com
+* Released under Attribution 3.0 Unported license - http://creativecommons.org/licenses/by/3.0/
+* Please leave this comment block intact as attribution
+*/
+
+a:not([href]), a[href=""], a[href$="#"], a[href^="javascript"], 
+.button:not(button):not([role="button"]):not([type="button"]):not([type="submit"]):not([type="reset"]),
+.btn:not(button):not([role="button"]):not([type="button"]):not([type="submit"]):not([type="reset"]), 
+a[class*="button"]:not([role="button"]), 
+a[role="button"]:not([href*="/"]):not([href*="."]):not([href*="?"]), 
+a[role="button"][href=""], a[role="button"][href$="#"], a[role="button"][href^="javascript"], 
+.button:not(button):not([role="button"]):not(input),
+.btn:not(button):not([role="button"]):not(input), 
+a[class*="button"]:not([role="button"]), 
+a.button[class*="disabled"],  
+a.btn.disabled, a[class*="button"][class*="disabled"], 
+form button:not([type]), 
+a:empty:not([aria-label]):not([aria-labelledby]), 
+button:empty:not([aria-label]):not([aria-labelledby]), 
+button:not([aria-label]):not([aria-labelledby]) img:only-child:not([alt]), 
+a:not([aria-label]):not([aria-labelledby]) img:only-child:not([alt]), 
+.button:not(a):not(button):not(input), 
+.btn:not(a):not(button):not(input),  
+figcaption, 
+form:not([action]),  
+fieldset > *:first-child:not(legend), 
+button.disabled:not([disabled]):not([readonly]), 
+acronym, applet, basefont, center, dir, 
+font, frame, frameset, isindex, listing, menu, multicol, 
+plaintext, s, strike, u, xmp, bgsound, blink, comment, 
+embed, marquee, nobr, noembed, wbr, 
+*:empty:not(script), 
+section > section:first-child, 
+article > section:first-child, 
+article > article:first-child, 
+section > article:first-child, 
+section > aside:first-child, 
+aside > aside:first-child, 
+article > aside:first-child, 
+aside > article:first-child, 
+aside > section:first-child, 
+body > header:not([role="banner"]), body > div > header:not([role="banner"]),  
+body > footer:not([role="contentinfo"]), body > div > footer:not([role="contentinfo"]), 
+section [role="banner"], section [role="contentinfo"], 
+article [role="banner"], article [role="contentinfo"], 
+aside [role="banner"], aside [role="contentinfo"], 
+#main:not(main):not([role="main"]),
+#footer:not(footer):not([role="contentinfo"]),
+#header:not(header):not([role="banner"]),
+#banner:not(header):not([role="banner"]), 
+[align], [alink], [background],
+[bgcolor], [border], [clear], 
+[height], [hspace], [link], 
+[nowrap], [start], [vlink], 
+[vspace], 
+script[language], 
+table[summary], 
+ol > *:not(li), 
+ul > *:not(li), 
+dl > *:not(dt):not(dd), 
+dt + *:not(dd), 
+abbr div, b div, i div, span div, em div, 
+strong div, small div, cite div, q div, code div, 
+label div,
+[tabindex]:not([tabindex="0"]):not([tabindex="-1"]), 
+li.divider:not([role="separator"]), li:empty:not([role="separator"]), 
+li.dropdown-header,
+.btn:not(button):not([href]), 
+li.disabled > a[href]:not([tabindex="-1"]),
+li.disabled > button:not([disabled]), 
+a.disabled[href]:not([tabindex="-1"]),
+button.disabled:not([disabled]), 
+[data-toggle="dropdown"]:not([aria-haspopup]) {
+	overflow: visible !important;	
+}
+
+a:not([href])::after, a[href=""]::after, a[href$="#"]::after, a[href^="javascript"]::after, 
+.button:not(button):not([role="button"]):not([type="button"]):not([type="submit"]):not([type="reset"])::after,
+.btn:not(button):not([role="button"]):not([type="button"]):not([type="submit"]):not([type="reset"])::after, 
+a[role="button"]:not([href*="/"]):not([href*="."]):not([href*="?"])::after, 
+a[role="button"][href=""]::after, a[role="button"][href$="#"]::after, a[role="button"][href^="javascript"]::after, 
+a[href].button[class*="disabled"]::after,
+a[href].disabled::after,  
+a[href][class*="button"][class*="disabled"]::after,
+form button:not([type])::after, 
+a:empty:not([aria-label]):not([aria-labelledby])::after, 
+button:empty:not([aria-label]):not([aria-labelledby])::after, 
+button:not([aria-label]):not([aria-labelledby]) img:only-child:not([alt])::after, 
+a:not([aria-label]):not([aria-labelledby]) img:only-child:not([alt])::after, 
+.button:not(a):not(button):not(input)::after, 
+.btn:not(a):not(button):not(input)::after,  
+figcaption::after, 
+form:not([action])::after,  
+fieldset > *:first-child:not(legend)::after, 
+button.disabled:not([disabled]):not([readonly])::after, 
+acronym::after, applet::after, basefont::after, center::after, dir::after, 
+font::after, frame::after, frameset::after, isindex::after, listing::after, menu::after, multicol::after, 
+plaintext::after, s::after, strike::after, u::after, xmp::after, bgsound::after, blink::after, comment::after, 
+embed::after, marquee::after, nobr::after, noembed::after, wbr::after, 
+*:empty:not(script)::after, 
+section > section:first-child::after, 
+article > section:first-child::after, 
+article > article:first-child::after, 
+section > article:first-child::after, 
+section > aside:first-child::after, 
+aside > aside:first-child::after, 
+article > aside:first-child::after, 
+aside > article:first-child::after, 
+aside > section:first-child::after, 
+body > header:not([role="banner"])::after, body > div > header:not([role="banner"])::after,  
+body > footer:not([role="contentinfo"])::after, body > div > footer:not([role="contentinfo"])::after, 
+section [role="banner"]::after, section [role="contentinfo"]::after, 
+article [role="banner"]::after, article [role="contentinfo"]::after, 
+aside [role="banner"]::after, aside [role="contentinfo"]::after, 
+#main:not(main):not([role="main"])::after,
+#footer:not(footer):not([role="contentinfo"])::after,
+#header:not(header):not([role="banner"])::after,
+#banner:not(header):not([role="banner"])::after, 
+[align]::after, [alink]::after, [background]::after, 
+[bgcolor]::after, [border]::after, [clear]::after, 
+[height]::after, [hspace]::after, [link]::after, 
+[nowrap]::after, [start]::after, [vlink]::after, 
+[vspace]::after, 
+script[language]::after, 
+table[summary]::after, 
+ol > *:not(li)::after, 
+ul > *:not(li)::after, 
+dl > *:not(dt):not(dd)::after, 
+dt + *:not(dd)::after, 
+abbr div::after, b div::after, i div::after, span div::after, em div::after, 
+strong div::after, small div::after, cite div::after, q div::after, code div::after, 
+label div::after,
+[tabindex]:not([tabindex="0"]):not([tabindex="-1"])::after, 
+li.divider:not([role="separator"])::after, li:empty:not([role="separator"])::after, 
+li.dropdown-header::after,
+.btn:not(button):not([href])::after, 
+li.disabled > a[href]:not([tabindex="-1"])::after,
+li.disabled > button:not([disabled])::after, 
+a.disabled[href]:not([tabindex="-1"])::after,
+button.disabled:not([disabled])::after, 
+[data-toggle="dropdown"]:not([aria-haspopup])::after
+{
+   display: inline-block !important;
+   background: #dc143c !important;
+   padding: 0.25em !important;
+   font-family: 'comic sans ms', cursive !important;
+   color: #fff !important;
+   font-size: 14px !important;
+   text-shadow: none !important;
+   font-weight: normal !important;
+   font-style: normal !important;
+}
+
+/**
+* Button and hyperlink errors
+----------------------------------------------------------------------
+*/
+
+a:not([href])::after {
+   content: 'Do you mean for this to be a link or a <button>? It does not link to anything!' !important;
+}
+
+a[href=""]::after, a[href$="#"]::after, a[href^="javascript"]::after {
+   content: 'Do you mean for this to be a <button>? It is a link that does not go anywhere!' !important;
+}
+
+.button:not(a):not(button):not(input):not([tabindex])::after, 
+.btn:not(a):not(button):not(input):not([tabindex])::after {
+	content: 'You are not using a standard focusable element for your "button". Can keyboard users focus on it?' !important;
+}
+
+a[role="button"]:not([href*="/"]):not([href*="."]):not([href*="?"])::after, 
+a[role="button"][href=""]::after, a[role="button"][href$="#"]::after, a[role="button"][href^="javascript"]::after {
+   content: 'Either use a proper href fallback or just use a button element.' !important;
+}
+
+a[href].button[class*="disabled"]::after,
+a[href].disabled::after,  
+a[href][class*="button"][class*="disabled"]::after {
+   content: 'You cannot disable a hyperlink. Use a button element with disabled attribute or remove the href' !important; 
+}
+
+[class*="toggle"]:not([aria-pressed]) {
+	content: 'If it is toggleable, you should supply an aria-pressed attribute.' !important;
+}
+
+form button:not([type])::after {
+	content: 'Is this a submit button, a reset button or just a button? Use type="submit", type="reset" or type="button".' !important;
+}
+
+a:empty:not([aria-label]):not([aria-labelledby])::after, 
+button:empty:not([aria-label]):not([aria-labelledby])::after, 
+button:not([aria-label]):not([aria-labelledby]) img:only-child:not([alt])::after, 
+a:not([aria-label]):not([aria-labelledby]) img:only-child:not([alt])::after {
+	content: 'All buttons and links should have text content, an image with alt text or an ARIA label.' !important;
+}
+
+figcaption::after {
+	content: '<figcaption>s must belong to parent <figure>s.' !important;
+}
+
+figure figcaption::after {
+	content: '' !important;
+	display: none !important;
+}
+
+/**
+* Form errors
+----------------------------------------------------------------------
+*/
+
+form:not([action])::after {
+	content: 'Forms must have action attributes.' !important;
+}
+
+fieldset > *:first-child:not(legend)::after {
+	content: 'Place a legend as the first element in this fieldset.' !important;
+}
+
+button.disabled:not([disabled]):not([readonly])::after {
+	content: 'Use a disabled or readonly attribute on this button.' !important;
+}
+
+/**
+* Deprecated, obsolete and proprietary elements
+----------------------------------------------------------------------
+*/
+
+acronym::after, applet::after, basefont::after, big::after, center::after, dir::after, 
+font::after, frame::after, frameset::after, isindex::after, listing::after, menu::after, multicol::after, 
+plaintext::after, strike::after, u::after, xmp::after, bgsound::after, blink::after, comment::after, 
+embed::after, marquee::after, nobr::after, noembed::after, wbr::after {
+	content: 'This element is deprecated, non-standard or obsolete.' !important;
+}
+
+/**
+* Empty elements
+----------------------------------------------------------------------
+*/
+
+*:empty:not(script):not(input):not(br):not(img):not(link):not(hr):not(embed):not(area):not(command):not(col):not(param):not(source):not(track):not(wbr):not(base):not(keygen)::after {
+	content: 'This element is empty. Why?' !important;
+}
+
+/**
+* Sectioning elements, headers and footers
+----------------------------------------------------------------------
+*/
+
+section > section:first-child::after, 
+article > section:first-child::after, 
+article > article:first-child::after, 
+section > article:first-child::after, 
+section > aside:first-child::after, 
+aside > aside:first-child::after, 
+article > aside:first-child::after, 
+aside > article:first-child::after, 
+aside > section:first-child::after {
+	content: 'Sectioning elems are not arbitrary wrappers. Use <div>s here.' !important;
+}
+
+body > header:not([role="banner"])::after, body > div > header:not([role="banner"])::after {
+	content: 'Use role="banner" on this header element.' !important;
+}
+
+body > footer:not([role="contentinfo"])::after, body > div > footer:not([role="contentinfo"])::after {
+	content: 'Use role="contentinfo" on this footer element.' !important;
+}
+
+section [role="banner"]::after, section [role="contentinfo"]::after, 
+article [role="banner"]::after, article [role="contentinfo"]::after, 
+aside [role="banner"]::after, aside [role="contentinfo"]::after {
+	content: 'Do not put [role="banner"] or [role="contentinfo"] inside a subsection.' !important;
+}
+
+#main:not(main):not([role="main"])::after {
+    content: 'Use the standard <main> element or role of main.' !important;
+}
+
+#footer:not(footer):not([role="contentinfo"])::after {
+    content: 'Use the standard <footer> element or contentinfo role' !important;
+}
+
+#header:not(header):not([role="banner"])::after,
+#banner:not(header):not([role="banner"])::after {
+    content: 'Use the standard <header> element or banner role' !important;
+}
+
+/**
+* Bad attribute usage
+----------------------------------------------------------------------
+*/
+
+[align]::after, [alink]::after, [background]::after, [bgcolor]::after, [border]::after, [clear]::after, [height]::after, [hspace]::after, [link]::after, [nowrap]::after, [start]::after, [vlink]::after, [vspace]::after {
+	content: 'You are using a deprecated attribute. Use CSS instead.' !important;
+}
+
+script[language]::after {
+	content: 'The language attribute is superceded by type. Use type.' !important;
+}
+
+table[summary]::after {
+	content: 'The summary attribute is deprecated. Perhaps use the <caption> element.' !important;
+}
+
+/**
+* List errors
+----------------------------------------------------------------------
+*/
+
+ol > *:not(li)::after, 
+ul > *:not(li)::after {
+	content: 'Only <li> can be a direct child of <ul> or <ol>.' !important;
+}
+
+dl > *:not(dt):not(dd)::after {
+	content: 'This element does not belong directly inside a definition list.' !important;
+}
+
+dt + *:not(dd)::after {
+	content: 'Definitions must follow definition titles.' !important;
+}
+
+/**
+* <div>s in the wrong places
+----------------------------------------------------------------------
+*/
+
+abbr div::after, b div::after, i div::after, span div::after, em div::after, 
+strong div::after, small div::after, cite div::after, q div::after, code div::after, 
+label div::after {
+	content: 'Do not put <div>s inside inline elements.' !important;
+}
+
+/**
+* Crazy tabindexing
+----------------------------------------------------------------------
+*/
+
+[tabindex]:not([tabindex="0"]):not([tabindex="-1"])::after {
+	content: 'Do not disrupt the natural tab order.' !important;
+}
+
+/* Boot Crap (specific to Twitter BootStrap class misuse)
+-----------------------------------------------------------------------------*/
+
+/* Don't use list elements to divide up list elements. 
+Use a class-based style on the preceeding or proceeding element or use role="separator" 
+on the item in question */
+
+li.divider:not([role="separator"])::after, li:empty:not([role="separator"])::after {
+	content: 'Do not use list items to divide up lists unless they have role = separator' !important;
+}
+
+/* For obvious reasons, a header for a list should not be an item in that list. 
+Make two lists! */
+
+li.dropdown-header::after {
+	content: 'Do not use list items as headers for lists, obvs' !important;
+}
+
+/* Only <button>s and, to a lesser extent, <a>s WITH HREFS are keyboard functional as "buttons" */
+
+.btn:not(button):not([href])::after {
+	content: 'This is not an accessible control. Use a <button> or a <a> with href.' !important;
+}
+
+/* Disabled links and buttons should be disabled correctly */
+
+li.disabled > a[href]:not([tabindex="-1"])::after,
+li.disabled > button:not([disabled])::after, 
+a.disabled[href]::after,
+button.disabled:not([disabled])::after {
+	content: 'Disable buttons with disabled attr and links by removing href' !important;
+}
+
+/* The submenu should be indicated with aria-haspopup */
+
+[data-toggle="dropdown"]:not([aria-haspopup])::after {
+	content: 'Indicate the hidden menu with aria-haspopup' !important;
+}
