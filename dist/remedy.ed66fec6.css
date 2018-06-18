@@ -21,7 +21,8 @@
   abbr[title] {
     border-bottom: none; /* 1 */
     text-decoration: underline; /* 2 */
-    text-decoration: underline dotted; /* 2 */
+    -webkit-text-decoration: underline dotted;
+            text-decoration: underline dotted; /* 2 */
   }
   
   b,
@@ -96,6 +97,11 @@
 
 }
 
+::-moz-selection {
+  color:var(--selection-color);
+  background: var(--selection-color); /* WebKit/Blink Browsers */
+}
+
 ::selection {
   color:var(--selection-color);
   background: var(--selection-color); /* WebKit/Blink Browsers */
@@ -103,14 +109,37 @@
 ::-moz-selection {
   color:var(--selection-color);
   background:var(--selection-color);/* Gecko Browsers */
+}
+
+/*a11y purposes*/
+html{
+  letter-spacing: .12em;
+  line-height: 1.5rem;
+  letter-spacing: .05rem;
+  word-spacing: .16rem;
 }.container {
   margin: 0 auto;
   max-width: 70rem;
-  width:var(--container-width);
+  width: var(--container-width);
   background-color: aqua;
 }
 
+.grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  /* 2 */
+}
 
+.col{
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 30rem;
+          flex: 1 0 30rem;
+  max-width: 100%;
+}
+/*
 @supports (display:grid) {
   .grid {
     display: grid;
@@ -157,7 +186,7 @@
   .col-12 {
     grid-column: auto/span 12;
   }
-}.m0 {
+}*/.m0 {
     margin: 0;
 }
 
@@ -935,6 +964,35 @@
 .plr9 {
     padding-left: 9rem;
     padding-right: 9rem;
+}.flex-row{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+}
+.flex-column{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+.flex-center{
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.wrap{
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }/*!
 * Revenge CSS v 1.0 
 * Copyright 2013, Heydon Pickering: http://www.heydonworks.com
@@ -1105,6 +1163,7 @@ a[href=""]::after, a[href$="#"]::after, a[href^="javascript"]::after {
 
 .button:not(a):not(button):not(input):not([tabindex])::after, 
 .btn:not(a):not(button):not(input):not([tabindex])::after {
+	content: 'You are not using a standard focusable -moz-element for your "button". Can keyboard users focus on it?' !important;
 	content: 'You are not using a standard focusable element for your "button". Can keyboard users focus on it?' !important;
 }
 
@@ -1116,6 +1175,7 @@ a[role="button"][href=""]::after, a[role="button"][href$="#"]::after, a[role="bu
 a[href].button[class*="disabled"]::after,
 a[href].disabled::after,  
 a[href][class*="button"][class*="disabled"]::after {
+   content: 'You cannot disable a hyperlink. Use a button -moz-element with disabled attribute or remove the href' !important;
    content: 'You cannot disable a hyperlink. Use a button element with disabled attribute or remove the href' !important; 
 }
 
@@ -1153,6 +1213,7 @@ form:not([action])::after {
 }
 
 fieldset > *:first-child:not(legend)::after {
+	content: 'Place a legend as the first -moz-element in this fieldset.' !important;
 	content: 'Place a legend as the first element in this fieldset.' !important;
 }
 
@@ -1169,6 +1230,7 @@ acronym::after, applet::after, basefont::after, big::after, center::after, dir::
 font::after, frame::after, frameset::after, isindex::after, listing::after, menu::after, multicol::after, 
 plaintext::after, strike::after, u::after, xmp::after, bgsound::after, blink::after, comment::after, 
 embed::after, marquee::after, nobr::after, noembed::after, wbr::after {
+	content: 'This -moz-element is deprecated, non-standard or obsolete.' !important;
 	content: 'This element is deprecated, non-standard or obsolete.' !important;
 }
 
@@ -1178,6 +1240,7 @@ embed::after, marquee::after, nobr::after, noembed::after, wbr::after {
 */
 
 *:empty:not(script):not(input):not(br):not(img):not(link):not(hr):not(embed):not(area):not(command):not(col):not(param):not(source):not(track):not(wbr):not(base):not(keygen)::after {
+	content: 'This -moz-element is empty. Why?' !important;
 	content: 'This element is empty. Why?' !important;
 }
 
@@ -1213,15 +1276,18 @@ aside [role="banner"]::after, aside [role="contentinfo"]::after {
 }
 
 #main:not(main):not([role="main"])::after {
+    content: 'Use the standard <main> -moz-element or role of main.' !important;
     content: 'Use the standard <main> element or role of main.' !important;
 }
 
 #footer:not(footer):not([role="contentinfo"])::after {
+    content: 'Use the standard <footer> -moz-element or contentinfo role' !important;
     content: 'Use the standard <footer> element or contentinfo role' !important;
 }
 
 #header:not(header):not([role="banner"])::after,
 #banner:not(header):not([role="banner"])::after {
+    content: 'Use the standard <header> -moz-element or banner role' !important;
     content: 'Use the standard <header> element or banner role' !important;
 }
 
@@ -1253,6 +1319,7 @@ ul > *:not(li)::after {
 }
 
 dl > *:not(dt):not(dd)::after {
+	content: 'This -moz-element does not belong directly inside a definition list.' !important;
 	content: 'This element does not belong directly inside a definition list.' !important;
 }
 
@@ -1317,4 +1384,73 @@ button.disabled:not([disabled])::after {
 
 [data-toggle="dropdown"]:not([aria-haspopup])::after {
 	content: 'Indicate the hidden menu with aria-haspopup' !important;
+}.bold {
+    font-weight: bold;
 }
+
+.italic {
+    font-style: italic;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+.caps{
+    text-transform: uppercase
+}
+.fs1{
+font-size: 1rem;
+}h1{
+    font-size: var(--h1-size);
+    color: var(--h1-color);
+    margin: var(--h1-margin);
+}
+
+h2{
+    font-size: var(--h2-size);
+    color: var(--h2-color);
+    margin: var(--h2-margin);
+}
+
+h3{
+    font-size: var(--h3-size);
+    color: var(--h3-color);
+    margin: var(--h3-margin);
+}
+
+h4{
+    font-size: var(--h4-size);
+    color: var(--h4-color);
+    margin: var(--h4-margin);
+}
+
+h5{
+    font-size: var(--h5-size);
+    color: var(--h5-color);
+    margin: var(--h5-margin);
+}
+
+h6{
+    font-size: var(--h6-size);
+    color: var(--h6-color);
+    margin: var(--h6-margin);
+}.img{
+    width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
+/*todo:filters sepia, opacity, blur...  http://html5-demos.appspot.com/static/css/filters/index.html  */

@@ -1,11 +1,21 @@
 .container {
   margin: 0 auto;
   max-width: 70rem;
-  width:var(--container-width);
+  width: var(--container-width);
   background-color: aqua;
 }
 
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  /* 2 */
+}
 
+.col{
+  flex: 1 0 30rem;
+  max-width: 100%;
+}
+/*
 @supports (display:grid) {
   .grid {
     display: grid;
@@ -52,4 +62,4 @@
   .col-12 {
     grid-column: auto/span 12;
   }
-}
+}*/

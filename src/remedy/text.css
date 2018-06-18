@@ -21,3 +21,9 @@
 .text-right {
     text-align: right;
 }
+.caps{
+    text-transform: uppercase
+}
+.fs1{
+font-size: 1rem;
+}

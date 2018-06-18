@@ -48,3 +48,11 @@
   color:var(--selection-color);
   background:var(--selection-color);/* Gecko Browsers */
 }
+
+/*a11y purposes*/
+html{
+  letter-spacing: .12em;
+  line-height: 1.5rem;
+  letter-spacing: .05rem;
+  word-spacing: .16rem;
+}

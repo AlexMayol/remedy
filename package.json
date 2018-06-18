@@ -4,7 +4,8 @@
   "description": "A CSS framework based on responsie font size and rem/em units.",
   "main": "remedy.css",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build src/index.html -d dist --no-cache"
   },
   "keywords": [
     "css",
@@ -19,6 +20,7 @@
   "author": "Alejandro Mayol",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^8.6.2",
     "node-sass": "^4.7.2"
   },
   "dependencies": {
