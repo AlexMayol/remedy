@@ -21,9 +21,75 @@
 .text-right {
     text-align: right;
 }
-.caps{
+
+.caps {
     text-transform: uppercase
 }
-.fs1{
-font-size: 1rem;
+
+.fs1 {
+    font-size: 1rem;
+}
+
+.fs125 {
+    font-size: 1.25rem;
+}
+
+.fs15 {
+    font-size: 1.5rem;
+}
+
+.fs2 {
+    font-size: 2rem;
+}
+
+.fs225 {
+    font-size: 2.25rem;
+}
+
+.fs250 {
+    font-size: 2.5rem;
+}
+
+.fs275 {
+    font-size: 2.75rem;
+}
+
+.fs3 {
+    font-size: 3rem;
+}
+
+.fs4 {
+    font-size: 4rem;
+}
+
+.fs5 {
+    font-size: 5rem;
+}
+
+.fs6 {
+    font-size: 6rem;
+}
+
+.fs7 {
+    font-size: 7rem;
+}
+
+.fs8 {
+    font-size: 8rem;
+}
+
+.fs9 {
+    font-size: 9rem;
+}
+
+::selection {
+    color: var(--selection-color);
+    background: var(--selection-color);
+    /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+    color: var(--selection-color, red);
+    background: var(--selection-color, red);
+    /* Gecko Browsers */
 }

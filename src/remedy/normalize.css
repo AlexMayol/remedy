@@ -1,6 +1,9 @@
+ *, ::before, ::afer{
+  box-sizing: border-box
+ }
  html {
-    line-height: 1.15; /* 1 */
-    -webkit-text-size-adjust: 100%; /* 2 */
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
   }
   
   body {
@@ -9,19 +12,22 @@
 
   
   pre {
-    font-family: monospace, monospace; /* 1 */
-    font-size: 1em; /* 2 */
+    font-family: monospace, monospace;
+    font-size: 1em;
   }
   
 
   a {
     background-color: transparent;
   }
+  div{
+    display: inline-block;
+  }
   
   abbr[title] {
-    border-bottom: none; /* 1 */
-    text-decoration: underline; /* 2 */
-    text-decoration: underline dotted; /* 2 */
+    border-bottom: none;
+    text-decoration: underline;
+    text-decoration: underline dotted;
   }
   
   b,
@@ -32,8 +38,8 @@
   code,
   kbd,
   samp {
-    font-family: monospace, monospace; /* 1 */
-    font-size: 1em; /* 2 */
+    font-family: monospace, monospace;
+    font-size: 1em;
   }
   
   small {

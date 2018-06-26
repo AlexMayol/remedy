@@ -1,6 +1,10 @@
+ *, ::before, ::afer{
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box
+ }
  html {
-    line-height: 1.15; /* 1 */
-    -webkit-text-size-adjust: 100%; /* 2 */
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
   }
   
   body {
@@ -9,20 +13,23 @@
 
   
   pre {
-    font-family: monospace, monospace; /* 1 */
-    font-size: 1em; /* 2 */
+    font-family: monospace, monospace;
+    font-size: 1em;
   }
   
 
   a {
     background-color: transparent;
   }
+  div{
+    display: inline-block;
+  }
   
   abbr[title] {
-    border-bottom: none; /* 1 */
-    text-decoration: underline; /* 2 */
+    border-bottom: none;
+    text-decoration: underline;
     -webkit-text-decoration: underline dotted;
-            text-decoration: underline dotted; /* 2 */
+            text-decoration: underline dotted;
   }
   
   b,
@@ -33,8 +40,8 @@
   code,
   kbd,
   samp {
-    font-family: monospace, monospace; /* 1 */
-    font-size: 1em; /* 2 */
+    font-family: monospace, monospace;
+    font-size: 1em;
   }
   
   small {
@@ -56,89 +63,154 @@
   sup {
     top: -0.5em;
   }:root {
-  font-size: 100%;
-  --bg-color: coral;
-  --text-color: black;
-  --link-color: blue;
-  --border-radius-sm: 2px;
-  --border-radius-md: 4px;
-  --border-radius-lg: 6px;
+    font-size: 100%; /*Takes browser's font-size, defined by the user*/
+    --bg-color: coral;
+    --text-color: black;
+    --link-color: blue;
+    --border-radius-sm: 2px;
+    --border-radius-md: 4px;
+    --border-radius-lg: 6px;
+    /*----Headings----*/
+    --h1-size: 2.5rem;
+    --h2-size: 2rem;
+    --h3-size: 1.75rem;
+    --h4-size: 1.5rem;
+    --h5-size: 1.25rem;
+    --h6-size: 1rem;
+    --h1-color: green;
+    --h2-color: green;
+    --h3-color: green;
+    --h4-color: green;
+    --h5-color: green;
+    --h6-color: green;
+    --h1-margin: 1rem 0;
+    --h2-margin: 1rem 0;
+    --h3-margin: 1rem 0;
+    --h4-margin: 1rem 0;
+    --h5-margin: 1rem 0;
+    --h6-margin: 1rem 0;
+    /*----Buttons------*/
+    --btn-marg: 1rem;
+    --btn-pad: .5rem .75rem;
+    --btn-color: white;
+    --btn-bg: blue;
+    --btn-border: none;
+    --btn-bradius: 4px;
+    /*-----Grid------*/
+    --col-count: 12;
+    --container-margin: 0 auto;
+    --container-width: 90%;
+    --container-bg:#8bf8ff;
+    --grid-gap: 1.5rem;
+    /*-----Text-------*/
+    --selection-color: white;
+    --selection-bg: red;
 
-
-  /*----Headings----*/
-  --h1-size:2.5rem;
-  --h2-size:2rem;
-  --h3-size:1.75rem;
-  --h4-size:1.5rem;
-  --h5-size:1.25rem;
-  --h6-size:1rem;
-
-  --h1-color: green;
-  --h2-color: green;
-  --h3-color: green;
-  --h4-color: green;
-  --h5-color: green;
-  --h6-color: green;
-
-  --h1-margin: 1rem 0;
-  --h2-margin: 1rem 0;
-  --h3-margin: 1rem 0;
-  --h4-margin: 1rem 0;
-  --h5-margin: 1rem 0;
-  --h6-margin: 1rem 0;
-
-  /*-----Grid------*/
-  --container-width:90%;
-  --grid-gap:1.5rem;
-
-  /*-----Other-------*/
-  --selection-color: white;
-  --selection-bg:red;
-
-}
-
-::-moz-selection {
-  color:var(--selection-color);
-  background: var(--selection-color); /* WebKit/Blink Browsers */
-}
-
-::selection {
-  color:var(--selection-color);
-  background: var(--selection-color); /* WebKit/Blink Browsers */
-}
-::-moz-selection {
-  color:var(--selection-color);
-  background:var(--selection-color);/* Gecko Browsers */
+  
 }
 
 /*a11y purposes*/
-html{
-  letter-spacing: .12em;
-  line-height: 1.5rem;
-  letter-spacing: .05rem;
-  word-spacing: .16rem;
-}.container {
-  margin: 0 auto;
-  max-width: 70rem;
-  width: var(--container-width);
-  background-color: aqua;
+
+html {
+    letter-spacing: .12em;
+    line-height: 1.5rem;
+    letter-spacing: .05rem;
+    word-spacing: .16rem;
+}/*https://vladocar.github.io/flexy/
+https://vladocar.github.io/SMART-CSS-GRID/smart-grid.css
+*/
+
+.container-fluid{
+  width: 100%;
+}
+.container {
+    margin: var(--container-margin);
+    width: var(--container-width);
+    background-color: var(--container-bg);
 }
 
 .grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    /* 2 */
+}
+
+.col {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 30rem;
+            flex: 1 0 30rem;
+    max-width: 100%;
+}
+
+.col-sm-1{
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 1rem;
+          flex: 1 0 1rem;
+}
+
+.container-flex-grid{
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  /* 2 */
+  width: 100%;
 }
-
-.col{
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 30rem;
-          flex: 1 0 30rem;
+.container-flex-grid div[class*="col-"]{
+  background-color: green;
   max-width: 100%;
 }
+.col-1{
+  width: calc( calc(100% / var(--col-count)) * 1);
+}
+
+.col-2{
+  width: calc( calc(100% / var(--col-count)) * 2);
+}
+
+.col-3{
+  width: calc( calc(100% / var(--col-count)) * 3);
+}
+
+.col-4{
+  width: calc( calc(100% / var(--col-count)) * 4);
+}
+
+.col-5{
+  width: calc( calc(100% / var(--col-count)) * 5);
+}
+
+.col-6{
+  width: calc( calc(100% / var(--col-count)) * 6);
+}
+
+.col-7{
+  width: calc( calc(100% / var(--col-count)) * 7);
+}
+
+.col-8{
+  width: calc( calc(100% / var(--col-count)) * 8);
+}
+
+.col-9{
+  width: calc( calc(100% / var(--col-count)) * 9);
+}
+
+.col-10{
+  width: calc( calc(100% / var(--col-count)) * 10);
+}
+
+.col-11{
+  width: calc( calc(100% / var(--col-count)) * 11);
+}
+
+.col-12{
+  width: calc( calc(100% / var(--col-count)) * 12);
+}
+
 /*
 @supports (display:grid) {
   .grid {
@@ -1000,153 +1072,250 @@ html{
 * Please leave this comment block intact as attribution
 */
 
-a:not([href]), a[href=""], a[href$="#"], a[href^="javascript"], 
+a:not([href]),
+a[href=""],
+a[href$="#"],
+a[href^="javascript"],
 .button:not(button):not([role="button"]):not([type="button"]):not([type="submit"]):not([type="reset"]),
-.btn:not(button):not([role="button"]):not([type="button"]):not([type="submit"]):not([type="reset"]), 
-a[class*="button"]:not([role="button"]), 
-a[role="button"]:not([href*="/"]):not([href*="."]):not([href*="?"]), 
-a[role="button"][href=""], a[role="button"][href$="#"], a[role="button"][href^="javascript"], 
+.btn:not(button):not([role="button"]):not([type="button"]):not([type="submit"]):not([type="reset"]),
+a[class*="button"]:not([role="button"]),
+a[role="button"]:not([href*="/"]):not([href*="."]):not([href*="?"]),
+a[role="button"][href=""],
+a[role="button"][href$="#"],
+a[role="button"][href^="javascript"],
 .button:not(button):not([role="button"]):not(input),
-.btn:not(button):not([role="button"]):not(input), 
-a[class*="button"]:not([role="button"]), 
-a.button[class*="disabled"],  
-a.btn.disabled, a[class*="button"][class*="disabled"], 
-form button:not([type]), 
-a:empty:not([aria-label]):not([aria-labelledby]), 
-button:empty:not([aria-label]):not([aria-labelledby]), 
-button:not([aria-label]):not([aria-labelledby]) img:only-child:not([alt]), 
-a:not([aria-label]):not([aria-labelledby]) img:only-child:not([alt]), 
-.button:not(a):not(button):not(input), 
-.btn:not(a):not(button):not(input),  
-figcaption, 
-form:not([action]),  
-fieldset > *:first-child:not(legend), 
-button.disabled:not([disabled]):not([readonly]), 
-acronym, applet, basefont, center, dir, 
-font, frame, frameset, isindex, listing, menu, multicol, 
-plaintext, s, strike, u, xmp, bgsound, blink, comment, 
-embed, marquee, nobr, noembed, wbr, 
-*:empty:not(script), 
-section > section:first-child, 
-article > section:first-child, 
-article > article:first-child, 
-section > article:first-child, 
-section > aside:first-child, 
-aside > aside:first-child, 
-article > aside:first-child, 
-aside > article:first-child, 
-aside > section:first-child, 
-body > header:not([role="banner"]), body > div > header:not([role="banner"]),  
-body > footer:not([role="contentinfo"]), body > div > footer:not([role="contentinfo"]), 
-section [role="banner"], section [role="contentinfo"], 
-article [role="banner"], article [role="contentinfo"], 
-aside [role="banner"], aside [role="contentinfo"], 
+.btn:not(button):not([role="button"]):not(input),
+a[class*="button"]:not([role="button"]),
+a.button[class*="disabled"],
+a.btn.disabled,
+a[class*="button"][class*="disabled"],
+form button:not([type]),
+a:empty:not([aria-label]):not([aria-labelledby]),
+button:empty:not([aria-label]):not([aria-labelledby]),
+button:not([aria-label]):not([aria-labelledby]) img:only-child:not([alt]),
+a:not([aria-label]):not([aria-labelledby]) img:only-child:not([alt]),
+.button:not(a):not(button):not(input),
+.btn:not(a):not(button):not(input),
+figcaption,
+form:not([action]),
+fieldset>*:first-child:not(legend),
+button.disabled:not([disabled]):not([readonly]),
+acronym,
+applet,
+basefont,
+center,
+dir,
+font,
+frame,
+frameset,
+isindex,
+listing,
+menu,
+multicol,
+plaintext,
+s,
+strike,
+u,
+xmp,
+bgsound,
+blink,
+comment,
+embed,
+marquee,
+nobr,
+noembed,
+wbr,
+*:empty:not(script),
+section>section:first-child,
+article>section:first-child,
+article>article:first-child,
+section>article:first-child,
+section>aside:first-child,
+aside>aside:first-child,
+article>aside:first-child,
+aside>article:first-child,
+aside>section:first-child,
+body>header:not([role="banner"]),
+body>div>header:not([role="banner"]),
+body>footer:not([role="contentinfo"]),
+body>div>footer:not([role="contentinfo"]),
+section [role="banner"],
+section [role="contentinfo"],
+article [role="banner"],
+article [role="contentinfo"],
+aside [role="banner"],
+aside [role="contentinfo"],
 #main:not(main):not([role="main"]),
 #footer:not(footer):not([role="contentinfo"]),
 #header:not(header):not([role="banner"]),
-#banner:not(header):not([role="banner"]), 
-[align], [alink], [background],
-[bgcolor], [border], [clear], 
-[height], [hspace], [link], 
-[nowrap], [start], [vlink], 
-[vspace], 
-script[language], 
-table[summary], 
-ol > *:not(li), 
-ul > *:not(li), 
-dl > *:not(dt):not(dd), 
-dt + *:not(dd), 
-abbr div, b div, i div, span div, em div, 
-strong div, small div, cite div, q div, code div, 
+#banner:not(header):not([role="banner"]),
+[align],
+[alink],
+[background],
+[bgcolor],
+[border],
+[clear],
+[height],
+[hspace],
+[link],
+[nowrap],
+[start],
+[vlink],
+[vspace],
+script[language],
+table[summary],
+ol>*:not(li),
+ul>*:not(li),
+dl>*:not(dt):not(dd),
+dt+*:not(dd),
+abbr div,
+b div,
+i div,
+span div,
+em div,
+strong div,
+small div,
+cite div,
+q div,
+code div,
 label div,
-[tabindex]:not([tabindex="0"]):not([tabindex="-1"]), 
-li.divider:not([role="separator"]), li:empty:not([role="separator"]), 
+[tabindex]:not([tabindex="0"]):not([tabindex="-1"]),
+li.divider:not([role="separator"]),
+li:empty:not([role="separator"]),
 li.dropdown-header,
-.btn:not(button):not([href]), 
-li.disabled > a[href]:not([tabindex="-1"]),
-li.disabled > button:not([disabled]), 
+.btn:not(button):not([href]),
+li.disabled>a[href]:not([tabindex="-1"]),
+li.disabled>button:not([disabled]),
 a.disabled[href]:not([tabindex="-1"]),
-button.disabled:not([disabled]), 
+button.disabled:not([disabled]),
 [data-toggle="dropdown"]:not([aria-haspopup]) {
-	overflow: visible !important;	
+    overflow: visible !important;
 }
 
-a:not([href])::after, a[href=""]::after, a[href$="#"]::after, a[href^="javascript"]::after, 
+a:not([href])::after,
+a[href=""]::after,
+a[href$="#"]::after,
+a[href^="javascript"]::after,
 .button:not(button):not([role="button"]):not([type="button"]):not([type="submit"]):not([type="reset"])::after,
-.btn:not(button):not([role="button"]):not([type="button"]):not([type="submit"]):not([type="reset"])::after, 
-a[role="button"]:not([href*="/"]):not([href*="."]):not([href*="?"])::after, 
-a[role="button"][href=""]::after, a[role="button"][href$="#"]::after, a[role="button"][href^="javascript"]::after, 
+.btn:not(button):not([role="button"]):not([type="button"]):not([type="submit"]):not([type="reset"])::after,
+a[role="button"]:not([href*="/"]):not([href*="."]):not([href*="?"])::after,
+a[role="button"][href=""]::after,
+a[role="button"][href$="#"]::after,
+a[role="button"][href^="javascript"]::after,
 a[href].button[class*="disabled"]::after,
-a[href].disabled::after,  
+a[href].disabled::after,
 a[href][class*="button"][class*="disabled"]::after,
-form button:not([type])::after, 
-a:empty:not([aria-label]):not([aria-labelledby])::after, 
-button:empty:not([aria-label]):not([aria-labelledby])::after, 
-button:not([aria-label]):not([aria-labelledby]) img:only-child:not([alt])::after, 
-a:not([aria-label]):not([aria-labelledby]) img:only-child:not([alt])::after, 
-.button:not(a):not(button):not(input)::after, 
-.btn:not(a):not(button):not(input)::after,  
-figcaption::after, 
-form:not([action])::after,  
-fieldset > *:first-child:not(legend)::after, 
-button.disabled:not([disabled]):not([readonly])::after, 
-acronym::after, applet::after, basefont::after, center::after, dir::after, 
-font::after, frame::after, frameset::after, isindex::after, listing::after, menu::after, multicol::after, 
-plaintext::after, s::after, strike::after, u::after, xmp::after, bgsound::after, blink::after, comment::after, 
-embed::after, marquee::after, nobr::after, noembed::after, wbr::after, 
-*:empty:not(script)::after, 
-section > section:first-child::after, 
-article > section:first-child::after, 
-article > article:first-child::after, 
-section > article:first-child::after, 
-section > aside:first-child::after, 
-aside > aside:first-child::after, 
-article > aside:first-child::after, 
-aside > article:first-child::after, 
-aside > section:first-child::after, 
-body > header:not([role="banner"])::after, body > div > header:not([role="banner"])::after,  
-body > footer:not([role="contentinfo"])::after, body > div > footer:not([role="contentinfo"])::after, 
-section [role="banner"]::after, section [role="contentinfo"]::after, 
-article [role="banner"]::after, article [role="contentinfo"]::after, 
-aside [role="banner"]::after, aside [role="contentinfo"]::after, 
+form button:not([type])::after,
+a:empty:not([aria-label]):not([aria-labelledby])::after,
+button:empty:not([aria-label]):not([aria-labelledby])::after,
+button:not([aria-label]):not([aria-labelledby]) img:only-child:not([alt])::after,
+a:not([aria-label]):not([aria-labelledby]) img:only-child:not([alt])::after,
+.button:not(a):not(button):not(input)::after,
+.btn:not(a):not(button):not(input)::after,
+figcaption::after,
+form:not([action])::after,
+fieldset>*:first-child:not(legend)::after,
+button.disabled:not([disabled]):not([readonly])::after,
+acronym::after,
+applet::after,
+basefont::after,
+center::after,
+dir::after,
+font::after,
+frame::after,
+frameset::after,
+isindex::after,
+listing::after,
+menu::after,
+multicol::after,
+plaintext::after,
+s::after,
+strike::after,
+u::after,
+xmp::after,
+bgsound::after,
+blink::after,
+comment::after,
+embed::after,
+marquee::after,
+nobr::after,
+noembed::after,
+wbr::after,
+*:empty:not(script)::after,
+section>section:first-child::after,
+article>section:first-child::after,
+article>article:first-child::after,
+section>article:first-child::after,
+section>aside:first-child::after,
+aside>aside:first-child::after,
+article>aside:first-child::after,
+aside>article:first-child::after,
+aside>section:first-child::after,
+body>header:not([role="banner"])::after,
+body>div>header:not([role="banner"])::after,
+body>footer:not([role="contentinfo"])::after,
+body>div>footer:not([role="contentinfo"])::after,
+section [role="banner"]::after,
+section [role="contentinfo"]::after,
+article [role="banner"]::after,
+article [role="contentinfo"]::after,
+aside [role="banner"]::after,
+aside [role="contentinfo"]::after,
 #main:not(main):not([role="main"])::after,
 #footer:not(footer):not([role="contentinfo"])::after,
 #header:not(header):not([role="banner"])::after,
-#banner:not(header):not([role="banner"])::after, 
-[align]::after, [alink]::after, [background]::after, 
-[bgcolor]::after, [border]::after, [clear]::after, 
-[height]::after, [hspace]::after, [link]::after, 
-[nowrap]::after, [start]::after, [vlink]::after, 
-[vspace]::after, 
-script[language]::after, 
-table[summary]::after, 
-ol > *:not(li)::after, 
-ul > *:not(li)::after, 
-dl > *:not(dt):not(dd)::after, 
-dt + *:not(dd)::after, 
-abbr div::after, b div::after, i div::after, span div::after, em div::after, 
-strong div::after, small div::after, cite div::after, q div::after, code div::after, 
+#banner:not(header):not([role="banner"])::after,
+[align]::after,
+[alink]::after,
+[background]::after,
+[bgcolor]::after,
+[border]::after,
+[clear]::after,
+[height]::after,
+[hspace]::after,
+[link]::after,
+[nowrap]::after,
+[start]::after,
+[vlink]::after,
+[vspace]::after,
+script[language]::after,
+table[summary]::after,
+ol>*:not(li)::after,
+ul>*:not(li)::after,
+dl>*:not(dt):not(dd)::after,
+dt+*:not(dd)::after,
+abbr div::after,
+b div::after,
+i div::after,
+span div::after,
+em div::after,
+strong div::after,
+small div::after,
+cite div::after,
+q div::after,
+code div::after,
 label div::after,
-[tabindex]:not([tabindex="0"]):not([tabindex="-1"])::after, 
-li.divider:not([role="separator"])::after, li:empty:not([role="separator"])::after, 
+[tabindex]:not([tabindex="0"]):not([tabindex="-1"])::after,
+li.divider:not([role="separator"])::after,
+li:empty:not([role="separator"])::after,
 li.dropdown-header::after,
-.btn:not(button):not([href])::after, 
-li.disabled > a[href]:not([tabindex="-1"])::after,
-li.disabled > button:not([disabled])::after, 
+.btn:not(button):not([href])::after,
+li.disabled>a[href]:not([tabindex="-1"])::after,
+li.disabled>button:not([disabled])::after,
 a.disabled[href]:not([tabindex="-1"])::after,
-button.disabled:not([disabled])::after, 
-[data-toggle="dropdown"]:not([aria-haspopup])::after
-{
-   display: inline-block !important;
-   background: #dc143c !important;
-   padding: 0.25em !important;
-   font-family: 'comic sans ms', cursive !important;
-   color: #fff !important;
-   font-size: 14px !important;
-   text-shadow: none !important;
-   font-weight: normal !important;
-   font-style: normal !important;
+button.disabled:not([disabled])::after,
+[data-toggle="dropdown"]:not([aria-haspopup])::after {
+    display: inline-block !important;
+    background: #dc143c !important;
+    padding: 0.25em !important;
+    font-family: 'comic sans ms', cursive !important;
+    color: #fff !important;
+    font-size: 14px !important;
+    text-shadow: none !important;
+    font-weight: normal !important;
+    font-style: normal !important;
 }
+
 
 /**
 * Button and hyperlink errors
@@ -1154,54 +1323,59 @@ button.disabled:not([disabled])::after,
 */
 
 a:not([href])::after {
-   content: 'Do you mean for this to be a link or a <button>? It does not link to anything!' !important;
+    content: 'Do you mean for this to be a link or a <button>? It does not link to anything!' !important;
 }
 
-a[href=""]::after, a[href$="#"]::after, a[href^="javascript"]::after {
-   content: 'Do you mean for this to be a <button>? It is a link that does not go anywhere!' !important;
+a[href=""]::after,
+a[href$="#"]::after,
+a[href^="javascript"]::after {
+    content: 'Do you mean for this to be a <button>? It is a link that does not go anywhere!' !important;
 }
 
-.button:not(a):not(button):not(input):not([tabindex])::after, 
+.button:not(a):not(button):not(input):not([tabindex])::after,
 .btn:not(a):not(button):not(input):not([tabindex])::after {
-	content: 'You are not using a standard focusable -moz-element for your "button". Can keyboard users focus on it?' !important;
-	content: 'You are not using a standard focusable element for your "button". Can keyboard users focus on it?' !important;
+    content: 'You are not using a standard focusable -moz-element for your "button". Can keyboard users focus on it?' !important;
+    content: 'You are not using a standard focusable element for your "button". Can keyboard users focus on it?' !important;
 }
 
-a[role="button"]:not([href*="/"]):not([href*="."]):not([href*="?"])::after, 
-a[role="button"][href=""]::after, a[role="button"][href$="#"]::after, a[role="button"][href^="javascript"]::after {
-   content: 'Either use a proper href fallback or just use a button element.' !important;
+a[role="button"]:not([href*="/"]):not([href*="."]):not([href*="?"])::after,
+a[role="button"][href=""]::after,
+a[role="button"][href$="#"]::after,
+a[role="button"][href^="javascript"]::after {
+    content: 'Either use a proper href fallback or just use a button element.' !important;
 }
 
 a[href].button[class*="disabled"]::after,
-a[href].disabled::after,  
+a[href].disabled::after,
 a[href][class*="button"][class*="disabled"]::after {
-   content: 'You cannot disable a hyperlink. Use a button -moz-element with disabled attribute or remove the href' !important;
-   content: 'You cannot disable a hyperlink. Use a button element with disabled attribute or remove the href' !important; 
+    content: 'You cannot disable a hyperlink. Use a button -moz-element with disabled attribute or remove the href' !important;
+    content: 'You cannot disable a hyperlink. Use a button element with disabled attribute or remove the href' !important;
 }
 
 [class*="toggle"]:not([aria-pressed]) {
-	content: 'If it is toggleable, you should supply an aria-pressed attribute.' !important;
+    content: 'If it is toggleable, you should supply an aria-pressed attribute.' !important;
 }
 
 form button:not([type])::after {
-	content: 'Is this a submit button, a reset button or just a button? Use type="submit", type="reset" or type="button".' !important;
+    content: 'Is this a submit button, a reset button or just a button? Use type="submit", type="reset" or type="button".' !important;
 }
 
-a:empty:not([aria-label]):not([aria-labelledby])::after, 
-button:empty:not([aria-label]):not([aria-labelledby])::after, 
-button:not([aria-label]):not([aria-labelledby]) img:only-child:not([alt])::after, 
+a:empty:not([aria-label]):not([aria-labelledby])::after,
+button:empty:not([aria-label]):not([aria-labelledby])::after,
+button:not([aria-label]):not([aria-labelledby]) img:only-child:not([alt])::after,
 a:not([aria-label]):not([aria-labelledby]) img:only-child:not([alt])::after {
-	content: 'All buttons and links should have text content, an image with alt text or an ARIA label.' !important;
+    content: 'All buttons and links should have text content, an image with alt text or an ARIA label.' !important;
 }
 
 figcaption::after {
-	content: '<figcaption>s must belong to parent <figure>s.' !important;
+    content: '<figcaption>s must belong to parent <figure>s.' !important;
 }
 
 figure figcaption::after {
-	content: '' !important;
-	display: none !important;
+    content: '' !important;
+    display: none !important;
 }
+
 
 /**
 * Form errors
@@ -1209,30 +1383,53 @@ figure figcaption::after {
 */
 
 form:not([action])::after {
-	content: 'Forms must have action attributes.' !important;
+    content: 'Forms must have action attributes.' !important;
 }
 
-fieldset > *:first-child:not(legend)::after {
-	content: 'Place a legend as the first -moz-element in this fieldset.' !important;
-	content: 'Place a legend as the first element in this fieldset.' !important;
+fieldset>*:first-child:not(legend)::after {
+    content: 'Place a legend as the first -moz-element in this fieldset.' !important;
+    content: 'Place a legend as the first element in this fieldset.' !important;
 }
 
 button.disabled:not([disabled]):not([readonly])::after {
-	content: 'Use a disabled or readonly attribute on this button.' !important;
+    content: 'Use a disabled or readonly attribute on this button.' !important;
 }
+
 
 /**
 * Deprecated, obsolete and proprietary elements
 ----------------------------------------------------------------------
 */
 
-acronym::after, applet::after, basefont::after, big::after, center::after, dir::after, 
-font::after, frame::after, frameset::after, isindex::after, listing::after, menu::after, multicol::after, 
-plaintext::after, strike::after, u::after, xmp::after, bgsound::after, blink::after, comment::after, 
-embed::after, marquee::after, nobr::after, noembed::after, wbr::after {
-	content: 'This -moz-element is deprecated, non-standard or obsolete.' !important;
-	content: 'This element is deprecated, non-standard or obsolete.' !important;
+acronym::after,
+applet::after,
+basefont::after,
+big::after,
+center::after,
+dir::after,
+font::after,
+frame::after,
+frameset::after,
+isindex::after,
+listing::after,
+menu::after,
+multicol::after,
+plaintext::after,
+strike::after,
+u::after,
+xmp::after,
+bgsound::after,
+blink::after,
+comment::after,
+embed::after,
+marquee::after,
+nobr::after,
+noembed::after,
+wbr::after {
+    content: 'This -moz-element is deprecated, non-standard or obsolete.' !important;
+    content: 'This element is deprecated, non-standard or obsolete.' !important;
 }
+
 
 /**
 * Empty elements
@@ -1240,39 +1437,45 @@ embed::after, marquee::after, nobr::after, noembed::after, wbr::after {
 */
 
 *:empty:not(script):not(input):not(br):not(img):not(link):not(hr):not(embed):not(area):not(command):not(col):not(param):not(source):not(track):not(wbr):not(base):not(keygen)::after {
-	content: 'This -moz-element is empty. Why?' !important;
-	content: 'This element is empty. Why?' !important;
+    content: 'This -moz-element is empty. Why?' !important;
+    content: 'This element is empty. Why?' !important;
 }
+
 
 /**
 * Sectioning elements, headers and footers
 ----------------------------------------------------------------------
 */
 
-section > section:first-child::after, 
-article > section:first-child::after, 
-article > article:first-child::after, 
-section > article:first-child::after, 
-section > aside:first-child::after, 
-aside > aside:first-child::after, 
-article > aside:first-child::after, 
-aside > article:first-child::after, 
-aside > section:first-child::after {
-	content: 'Sectioning elems are not arbitrary wrappers. Use <div>s here.' !important;
+section>section:first-child::after,
+article>section:first-child::after,
+article>article:first-child::after,
+section>article:first-child::after,
+section>aside:first-child::after,
+aside>aside:first-child::after,
+article>aside:first-child::after,
+aside>article:first-child::after,
+aside>section:first-child::after {
+    content: 'Sectioning elems are not arbitrary wrappers. Use <div>s here.' !important;
 }
 
-body > header:not([role="banner"])::after, body > div > header:not([role="banner"])::after {
-	content: 'Use role="banner" on this header element.' !important;
+body>header:not([role="banner"])::after,
+body>div>header:not([role="banner"])::after {
+    content: 'Use role="banner" on this header element.' !important;
 }
 
-body > footer:not([role="contentinfo"])::after, body > div > footer:not([role="contentinfo"])::after {
-	content: 'Use role="contentinfo" on this footer element.' !important;
+body>footer:not([role="contentinfo"])::after,
+body>div>footer:not([role="contentinfo"])::after {
+    content: 'Use role="contentinfo" on this footer element.' !important;
 }
 
-section [role="banner"]::after, section [role="contentinfo"]::after, 
-article [role="banner"]::after, article [role="contentinfo"]::after, 
-aside [role="banner"]::after, aside [role="contentinfo"]::after {
-	content: 'Do not put [role="banner"] or [role="contentinfo"] inside a subsection.' !important;
+section [role="banner"]::after,
+section [role="contentinfo"]::after,
+article [role="banner"]::after,
+article [role="contentinfo"]::after,
+aside [role="banner"]::after,
+aside [role="contentinfo"]::after {
+    content: 'Do not put [role="banner"] or [role="contentinfo"] inside a subsection.' !important;
 }
 
 #main:not(main):not([role="main"])::after {
@@ -1291,52 +1494,76 @@ aside [role="banner"]::after, aside [role="contentinfo"]::after {
     content: 'Use the standard <header> element or banner role' !important;
 }
 
+
 /**
 * Bad attribute usage
 ----------------------------------------------------------------------
 */
 
-[align]::after, [alink]::after, [background]::after, [bgcolor]::after, [border]::after, [clear]::after, [height]::after, [hspace]::after, [link]::after, [nowrap]::after, [start]::after, [vlink]::after, [vspace]::after {
-	content: 'You are using a deprecated attribute. Use CSS instead.' !important;
+[align]::after,
+[alink]::after,
+[background]::after,
+[bgcolor]::after,
+[border]::after,
+[clear]::after,
+[height]::after,
+[hspace]::after,
+[link]::after,
+[nowrap]::after,
+[start]::after,
+[vlink]::after,
+[vspace]::after {
+    content: 'You are using a deprecated attribute. Use CSS instead.' !important;
 }
 
 script[language]::after {
-	content: 'The language attribute is superceded by type. Use type.' !important;
+    content: 'The language attribute is superceded by type. Use type.' !important;
 }
 
 table[summary]::after {
-	content: 'The summary attribute is deprecated. Perhaps use the <caption> element.' !important;
+    content: 'The summary attribute is deprecated. Perhaps use the <caption> element.' !important;
 }
+
 
 /**
 * List errors
 ----------------------------------------------------------------------
 */
 
-ol > *:not(li)::after, 
-ul > *:not(li)::after {
-	content: 'Only <li> can be a direct child of <ul> or <ol>.' !important;
+ol>*:not(li)::after,
+ul>*:not(li)::after {
+    content: 'Only <li> can be a direct child of <ul> or <ol>.' !important;
 }
 
-dl > *:not(dt):not(dd)::after {
-	content: 'This -moz-element does not belong directly inside a definition list.' !important;
-	content: 'This element does not belong directly inside a definition list.' !important;
+dl>*:not(dt):not(dd)::after {
+    content: 'This -moz-element does not belong directly inside a definition list.' !important;
+    content: 'This element does not belong directly inside a definition list.' !important;
 }
 
-dt + *:not(dd)::after {
-	content: 'Definitions must follow definition titles.' !important;
+dt+*:not(dd)::after {
+    content: 'Definitions must follow definition titles.' !important;
 }
+
 
 /**
 * <div>s in the wrong places
 ----------------------------------------------------------------------
 */
 
-abbr div::after, b div::after, i div::after, span div::after, em div::after, 
-strong div::after, small div::after, cite div::after, q div::after, code div::after, 
+abbr div::after,
+b div::after,
+i div::after,
+span div::after,
+em div::after,
+strong div::after,
+small div::after,
+cite div::after,
+q div::after,
+code div::after,
 label div::after {
-	content: 'Do not put <div>s inside inline elements.' !important;
+    content: 'Do not put <div>s inside inline elements.' !important;
 }
+
 
 /**
 * Crazy tabindexing
@@ -1344,46 +1571,53 @@ label div::after {
 */
 
 [tabindex]:not([tabindex="0"]):not([tabindex="-1"])::after {
-	content: 'Do not disrupt the natural tab order.' !important;
+    content: 'Do not disrupt the natural tab order.' !important;
 }
+
 
 /* Boot Crap (specific to Twitter BootStrap class misuse)
 -----------------------------------------------------------------------------*/
+
 
 /* Don't use list elements to divide up list elements. 
 Use a class-based style on the preceeding or proceeding element or use role="separator" 
 on the item in question */
 
-li.divider:not([role="separator"])::after, li:empty:not([role="separator"])::after {
-	content: 'Do not use list items to divide up lists unless they have role = separator' !important;
+li.divider:not([role="separator"])::after,
+li:empty:not([role="separator"])::after {
+    content: 'Do not use list items to divide up lists unless they have role = separator' !important;
 }
+
 
 /* For obvious reasons, a header for a list should not be an item in that list. 
 Make two lists! */
 
 li.dropdown-header::after {
-	content: 'Do not use list items as headers for lists, obvs' !important;
+    content: 'Do not use list items as headers for lists, obvs' !important;
 }
+
 
 /* Only <button>s and, to a lesser extent, <a>s WITH HREFS are keyboard functional as "buttons" */
 
 .btn:not(button):not([href])::after {
-	content: 'This is not an accessible control. Use a <button> or a <a> with href.' !important;
+    content: 'This is not an accessible control. Use a <button> or a <a> with href.' !important;
 }
+
 
 /* Disabled links and buttons should be disabled correctly */
 
-li.disabled > a[href]:not([tabindex="-1"])::after,
-li.disabled > button:not([disabled])::after, 
+li.disabled>a[href]:not([tabindex="-1"])::after,
+li.disabled>button:not([disabled])::after,
 a.disabled[href]::after,
 button.disabled:not([disabled])::after {
-	content: 'Disable buttons with disabled attr and links by removing href' !important;
+    content: 'Disable buttons with disabled attr and links by removing href' !important;
 }
+
 
 /* The submenu should be indicated with aria-haspopup */
 
 [data-toggle="dropdown"]:not([aria-haspopup])::after {
-	content: 'Indicate the hidden menu with aria-haspopup' !important;
+    content: 'Indicate the hidden menu with aria-haspopup' !important;
 }.bold {
     font-weight: bold;
 }
@@ -1407,12 +1641,86 @@ button.disabled:not([disabled])::after {
 .text-right {
     text-align: right;
 }
-.caps{
+
+.caps {
     text-transform: uppercase
 }
-.fs1{
-font-size: 1rem;
-}h1{
+
+.fs1 {
+    font-size: 1rem;
+}
+
+.fs125 {
+    font-size: 1.25rem;
+}
+
+.fs15 {
+    font-size: 1.5rem;
+}
+
+.fs2 {
+    font-size: 2rem;
+}
+
+.fs225 {
+    font-size: 2.25rem;
+}
+
+.fs250 {
+    font-size: 2.5rem;
+}
+
+.fs275 {
+    font-size: 2.75rem;
+}
+
+.fs3 {
+    font-size: 3rem;
+}
+
+.fs4 {
+    font-size: 4rem;
+}
+
+.fs5 {
+    font-size: 5rem;
+}
+
+.fs6 {
+    font-size: 6rem;
+}
+
+.fs7 {
+    font-size: 7rem;
+}
+
+.fs8 {
+    font-size: 8rem;
+}
+
+.fs9 {
+    font-size: 9rem;
+}
+
+::-moz-selection {
+    color: var(--selection-color);
+    background: var(--selection-color);
+    /* WebKit/Blink Browsers */
+}
+
+::selection {
+    color: var(--selection-color);
+    background: var(--selection-color);
+    /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+    color: var(--selection-color, red);
+    background: var(--selection-color, red);
+    /* Gecko Browsers */
+}/*asd: var(--name, fallback)*/
+
+h1{
     font-size: var(--h1-size);
     color: var(--h1-color);
     margin: var(--h1-margin);
@@ -1446,6 +1754,23 @@ h6{
     font-size: var(--h6-size);
     color: var(--h6-color);
     margin: var(--h6-margin);
+}button,
+.btn {
+    border: 0;
+    background-color: transparent;
+    border-radius: 0;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.btn {
+    padding: var(--btn-pad);
+    margin: var(--btn-marg);
+    color: var(--btn-color);
+    background-color: var(--btn-bg);
+    border: var(--btn-border);
+    border-radius: var(--btn-bradius);
 }.img{
     width: 100%;
     height: auto;
@@ -1453,4 +1778,90 @@ h6{
        object-fit: cover;
 }
 
-/*todo:filters sepia, opacity, blur...  http://html5-demos.appspot.com/static/css/filters/index.html  */
+/*todo:filters sepia, opacity, blur...  http://html5-demos.appspot.com/static/css/filters/index.html  */@-webkit-keyframes radial-pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
+  }
+
+  100% {
+    -webkit-box-shadow: 0 0 0 30px rgba(0, 0, 0, 0);
+            box-shadow: 0 0 0 30px rgba(0, 0, 0, 0);
+  }
+}
+@keyframes radial-pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
+  }
+
+  100% {
+    -webkit-box-shadow: 0 0 0 30px rgba(0, 0, 0, 0);
+            box-shadow: 0 0 0 30px rgba(0, 0, 0, 0);
+  }
+}
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.loading {
+  color: transparent !important;
+  min-height: .8rem;
+  pointer-events: none;
+  position: relative;
+}
+
+.loading::after {
+  -webkit-animation: loading 500ms infinite linear;
+          animation: loading 500ms infinite linear;
+  border: .1rem solid #5755d9;
+  border-radius: 50%;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  content: "";
+  display: block;
+  height: .8rem;
+  left: 50%;
+  margin-left: -.4rem;
+  margin-top: -.4rem;
+  position: absolute;
+  top: 50%;
+  width: .8rem;
+  z-index: 1;
+}.test{
+    background: rgba(0,0,255,0.75);
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 15rem;
+    height: 15rem;
+}
+.test:hover, .test:focus{
+   
+    -webkit-animation: radial-pulse 1s infinite;
+   
+            animation: radial-pulse 1s infinite;
+}

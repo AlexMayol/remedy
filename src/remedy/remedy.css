@@ -6,4 +6,22 @@
 @import "./a11y.css";
 @import "./text.css";
 @import "./headings.css";
+@import "./buttons.css";
 @import "./images.css";
+@import "./animations.css";
+
+
+
+.test{
+    background: rgba(0,0,255,0.75);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15rem;
+    height: 15rem;
+}
+.test:hover, .test:focus{
+   
+    animation: radial-pulse 1s infinite;
+}

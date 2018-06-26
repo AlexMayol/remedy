@@ -2,45 +2,102 @@
 <html lang="es">
 
 <head>
-      <meta charset="utf-8">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <meta name="description" content="Remedy CSS!">
-      <meta name="subject" content="just a simple exercise for fun">
-      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-      <link href="remedy/remedy.css" rel="stylesheet" type="text/css">
-      <noscript>
-            <!--no JS alternative-->
-      </noscript>
-      <title></title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Remedy CSS!">
+    <meta name="subject" content="just a simple exercise for fun">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="remedy/remedy.css" rel="stylesheet" type="text/css">
+    <noscript>
+        <!--no JS alternative-->
+    </noscript>
+    <title></title>
 </head>
 
 <body>
-      <main class="container" id="playground">
-            <h1 class="fs1 text-center">MUCHO POR HACER. MUCHO POR DESCUBRIR. MUCHO QUE DISFRUTAR.</h1>
-            <p class="text-center">La Nucía está en la comunidad valenciana, en Alicante, en la comarca de la Marina Baixa. Las sierras de la Aitana
-                  y Aixortà protegen La Nucía de los vientos del Norte y tiene la suerte de estar entre el mar y la montaña.
-                  Situado en un valle tranquilo, a 10 Km de Benidorm, comunicado por la Autopista del Mediterráneo que conecta
-                  con Alicante, a 45 Kilómetros, y las autovías de Madrid, Murcia y Andalucía.</p>
 
-            <section class="grid">
-                  <div v-for="a in 4" class="col">
-                        <div style="margin: 1rem;">
-                              <h2>deporte</h2>
-                              <img class="img" src="http://vitalysresorts.com/wp-content/uploads/2017/10/1463045330-elefante-750x330.jpg" alt="alternativo de la imagen">
-                              <p class="text-justify">Hablar de La Nucía es hablar de Deporte. Ha sido Premiada como Villa Europea del Deporte y
-                                    Premio Nacional del Deporte en 2012, La Ciudad Deportiva Camino Cano es un referente
-                                    del turismo deportivo, recibe visitantes tanto a nivel nacional como internacional durante
-                                    todo el año debido a los múltiples eventos que se organizan aquí. 66 Instalaciones deportivas
-                                    en un espacio de 120.000m2 la convierten en un destino sugerente para los amantes del
-                                    deporte. </p>
-                        </div>
+    <button class="test">pulsooo</button>
 
-                  </div>
-            </section>
-      </main>
-      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-      <script src="code.js"></script>
+
+
+    <main class="container" id="playground">
+        <h1 class="fs1 text-center">MUCHO POR HACER. MUCHO POR DESCUBRIR. MUCHO QUE DISFRUTAR.</h1>
+        <p class="text-center">La Nucía está en la comunidad valenciana, en Alicante, en la comarca de la Marina Baixa. Las sierras de la Aitana
+            y Aixortà protegen La Nucía de los vientos del Norte y tiene la suerte de estar entre el mar y la montaña. Situado
+            en un valle tranquilo, a 10 Km de Benidorm, comunicado por la Autopista del Mediterráneo que conecta con Alicante,
+            a 45 Kilómetros, y las autovías de Madrid, Murcia y Andalucía.</p>
+
+
+
+        <div class="container-flex-grid">
+            <div class="col-2">
+                2
+            </div>
+            <div class="col-4">
+              4
+            </div>
+            <div class="col-1">
+               1
+            </div>
+            <div class="col-1">
+                1
+            </div>
+            <div class="col-1">
+               1
+            </div>
+            <div class="col-1">
+                1
+            </div>
+            <div class="col-2">
+              2
+            </div>
+            <div class="col-2">
+                2
+            </div>
+            <div class="col-5">
+              5
+            </div>
+            <div class="col-12">
+                   12
+            </div>
+            <div class="col-6">
+                6
+            </div>
+            <div class="col-6">
+                    6
+            </div>
+            <div class="col-12">
+                   12
+            </div>
+
+        </div>
+        <section class="grid">
+
+
+            <details>
+                <summary>Oh, hi mark details</summary>
+                <p>Just a paragraph</p>
+                <p>You know</p>
+                <button class="btn">cliiick</button>
+            </details>
+            <div v-for="a in 4" class="col">
+                <div style="margin: 1rem;">
+                    <h2>deporte</h2>
+                    <img class="img" src="http://vitalysresorts.com/wp-content/uploads/2017/10/1463045330-elefante-750x330.jpg" alt="alternativo de la imagen">
+                    <p class="text-justify">Hablar de La Nucía es hablar de Deporte. Ha sido Premiada como Villa Europea del Deporte y Premio Nacional
+                        del Deporte en 2012, La Ciudad Deportiva Camino Cano es un referente del turismo deportivo, recibe
+                        visitantes tanto a nivel nacional como internacional durante todo el año debido a los múltiples eventos
+                        que se organizan aquí. 66 Instalaciones deportivas en un espacio de 120.000m2 la convierten en un
+                        destino sugerente para los amantes del deporte. </p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="code.js"></script>
 </body>
 
 </html>

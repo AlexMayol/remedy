@@ -1,20 +1,88 @@
+/*https://vladocar.github.io/flexy/
+https://vladocar.github.io/SMART-CSS-GRID/smart-grid.css
+*/
+
+.container-fluid{
+  width: 100%;
+}
 .container {
-  margin: 0 auto;
-  max-width: 70rem;
-  width: var(--container-width);
-  background-color: aqua;
+    margin: var(--container-margin);
+    width: var(--container-width);
+    background-color: var(--container-bg);
 }
 
 .grid {
-  display: flex;
-  flex-wrap: wrap;
-  /* 2 */
+    display: flex;
+    flex-wrap: wrap;
+    /* 2 */
 }
 
-.col{
-  flex: 1 0 30rem;
+.col {
+    flex: 1 0 30rem;
+    max-width: 100%;
+}
+
+.col-sm-1{
+  flex: 1 0 1rem;
+}
+
+.container-flex-grid{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.container-flex-grid div[class*="col-"]{
+  background-color: green;
   max-width: 100%;
 }
+.col-1{
+  width: calc( calc(100% / var(--col-count)) * 1);
+}
+
+.col-2{
+  width: calc( calc(100% / var(--col-count)) * 2);
+}
+
+.col-3{
+  width: calc( calc(100% / var(--col-count)) * 3);
+}
+
+.col-4{
+  width: calc( calc(100% / var(--col-count)) * 4);
+}
+
+.col-5{
+  width: calc( calc(100% / var(--col-count)) * 5);
+}
+
+.col-6{
+  width: calc( calc(100% / var(--col-count)) * 6);
+}
+
+.col-7{
+  width: calc( calc(100% / var(--col-count)) * 7);
+}
+
+.col-8{
+  width: calc( calc(100% / var(--col-count)) * 8);
+}
+
+.col-9{
+  width: calc( calc(100% / var(--col-count)) * 9);
+}
+
+.col-10{
+  width: calc( calc(100% / var(--col-count)) * 10);
+}
+
+.col-11{
+  width: calc( calc(100% / var(--col-count)) * 11);
+}
+
+.col-12{
+  width: calc( calc(100% / var(--col-count)) * 12);
+}
+
 /*
 @supports (display:grid) {
   .grid {
