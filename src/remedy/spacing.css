@@ -1,5 +1,37 @@
+.fullw{
+    width: 100%;
+}
 .m0 {
     margin: 0;
+}
+
+.m025 {
+    margin: .25rem;
+}
+
+.m05 {
+    margin: .5rem;
+}
+
+.m075 {
+    margin: .75rem;
+}
+
+.m1 {
+    margin: 1rem;
+}
+
+.m125 {
+    margin: 1.25rem;
+}
+.m15 {
+    margin: 1.5rem;
+}
+.m175 {
+    margin: 1.75rem;
+}
+.m2 {
+    margin: 2rem;
 }
 
 .mt0 {
@@ -392,6 +424,35 @@
     padding: 0;
 }
 
+.p025 {
+    padding: .25rem;
+}
+
+.p05 {
+    padding: .5rem;
+}
+
+.p075 {
+    padding: .75rem;
+}
+
+.p1 {
+    padding: 1rem;
+}
+
+.p125 {
+    padding: 1.25rem;
+}
+.p15 {
+    padding: 1.5rem;
+}
+.p175 {
+    padding: 1.75rem;
+}
+.p2 {
+    padding: 2rem;
+}
+
 .pt0 {
     padding-top: 0;
 }
@@ -679,7 +740,7 @@
 }
 
 .ptb3 {
-    padding-top: 3;
+    padding-top: 3rem;
     padding-bottom: 3rem;
 }
 

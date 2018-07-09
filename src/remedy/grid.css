@@ -2,7 +2,7 @@
 https://vladocar.github.io/SMART-CSS-GRID/smart-grid.css
 */
 
-.container-fluid{
+.container-full{
   width: 100%;
 }
 .container {
@@ -12,86 +12,66 @@ https://vladocar.github.io/SMART-CSS-GRID/smart-grid.css
 }
 
 .grid {
-    display: flex;
-    flex-wrap: wrap;
-    /* 2 */
-}
-
-.col {
-    flex: 1 0 30rem;
-    max-width: 100%;
-}
-
-.col-sm-1{
-  flex: 1 0 1rem;
-}
-
-.container-flex-grid{
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
 }
-.container-flex-grid div[class*="col-"]{
-  background-color: green;
-  max-width: 100%;
-}
+
 .col-1{
-  width: calc( calc(100% / var(--col-count)) * 1);
+  flex: 1 0 calc( calc(100% / var(--col-count)) * 1);
 }
 
 .col-2{
-  width: calc( calc(100% / var(--col-count)) * 2);
+  flex: 1 0 calc( calc(100% / var(--col-count)) * 2);
 }
 
 .col-3{
-  width: calc( calc(100% / var(--col-count)) * 3);
+  flex: 1 0 calc( calc(100% / var(--col-count)) * 3);
 }
 
 .col-4{
-  width: calc( calc(100% / var(--col-count)) * 4);
+  flex: 1 0 calc( calc(100% / var(--col-count)) * 4);
 }
 
 .col-5{
-  width: calc( calc(100% / var(--col-count)) * 5);
+  flex: 1 0 calc( calc(100% / var(--col-count)) * 5);
 }
 
 .col-6{
-  width: calc( calc(100% / var(--col-count)) * 6);
+  flex: 1 0 calc( calc(100% / var(--col-count)) * 6);
 }
 
 .col-7{
-  width: calc( calc(100% / var(--col-count)) * 7);
+  flex: 1 0 calc( calc(100% / var(--col-count)) * 7);
 }
 
 .col-8{
-  width: calc( calc(100% / var(--col-count)) * 8);
+  flex: 1 0 calc( calc(100% / var(--col-count)) * 8);
 }
 
 .col-9{
-  width: calc( calc(100% / var(--col-count)) * 9);
+  flex: 1 0 calc( calc(100% / var(--col-count)) * 9);
 }
 
 .col-10{
-  width: calc( calc(100% / var(--col-count)) * 10);
+  flex: 1 0 calc( calc(100% / var(--col-count)) * 10);
 }
 
 .col-11{
-  width: calc( calc(100% / var(--col-count)) * 11);
+  flex: 1 0 calc( calc(100% / var(--col-count)) * 11);
 }
 
 .col-12{
-  width: calc( calc(100% / var(--col-count)) * 12);
+  flex: 1 0 calc( calc(100% / var(--col-count)) * 12);
 }
 
-/*
 @supports (display:grid) {
   .grid {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-auto-rows: 200px;
+    grid-template-columns: repeat(var(--col-count), 1fr);
+    grid-auto-rows: auto;
     grid-gap: var(--grid-gap);
   }
-  [class^="col-"] {
+  [class*="col-"] {
     background-color: brown;
   }
   .col-1 {
@@ -130,4 +110,10 @@ https://vladocar.github.io/SMART-CSS-GRID/smart-grid.css
   .col-12 {
     grid-column: auto/span 12;
   }
-}*/
+
+  @media (max-width:50rem){
+    [class*="col-"] {
+      grid-column: auto/span var(--col-count, 12);
+    }
+  }
+}

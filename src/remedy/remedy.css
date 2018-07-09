@@ -11,17 +11,12 @@
 @import "./animations.css";
 
 
-
-.test{
-    background: rgba(0,0,255,0.75);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 15rem;
-    height: 15rem;
+.icon{
+    width: 20px;
 }
-.test:hover, .test:focus{
-   
-    animation: radial-pulse 1s infinite;
+.hover{
+    transition: all .3s ease;
+}
+.hover:hover, .hover:focus{
+    transform: scale(1.1);
 }

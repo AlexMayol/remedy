@@ -26,6 +26,22 @@
     text-transform: uppercase
 }
 
+.fs05 {
+    font-size: .5rem;
+}
+.fs06 {
+    font-size: .6rem;
+}
+.fs07 {
+    font-size: .7rem;
+}
+.fs08 {
+    font-size: .8rem;
+}
+.fs09 {
+    font-size: .9rem;
+}
+
 .fs1 {
     font-size: 1rem;
 }
@@ -89,7 +105,7 @@
 }
 
 ::-moz-selection {
-    color: var(--selection-color, red);
-    background: var(--selection-color, red);
+    color: var(--selection-color);
+    background: var(--selection-color);
     /* Gecko Browsers */
 }

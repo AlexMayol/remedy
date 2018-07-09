@@ -89,8 +89,14 @@
     --h4-margin: 1rem 0;
     --h5-margin: 1rem 0;
     --h6-margin: 1rem 0;
+    --h1-lineh: 1;
+    --h2-lineh: 1;
+    --h3-lineh: 1;
+    --h4-lineh: 1;
+    --h5-lineh: 1;
+    --h6-lineh: 1;
     /*----Buttons------*/
-    --btn-marg: 1rem;
+    --btn-marg: 1rem 0;
     --btn-pad: .5rem .75rem;
     --btn-color: white;
     --btn-bg: blue;
@@ -104,7 +110,11 @@
     --grid-gap: 1.5rem;
     /*-----Text-------*/
     --selection-color: white;
-    --selection-bg: red;
+    --selection-bg: rgb(10, 27, 21);
+    /*----Screen size----*/
+    --large:70rem;
+    --medium:50rem;
+    --small:40rem;
 
   
 }
@@ -120,7 +130,7 @@ html {
 https://vladocar.github.io/SMART-CSS-GRID/smart-grid.css
 */
 
-.container-fluid{
+.container-full{
   width: 100%;
 }
 .container {
@@ -130,96 +140,93 @@ https://vladocar.github.io/SMART-CSS-GRID/smart-grid.css
 }
 
 .grid {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    /* 2 */
-}
-
-.col {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 30rem;
-            flex: 1 0 30rem;
-    max-width: 100%;
-}
-
-.col-sm-1{
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 1rem;
-          flex: 1 0 1rem;
-}
-
-.container-flex-grid{
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 100%;
 }
-.container-flex-grid div[class*="col-"]{
-  background-color: green;
-  max-width: 100%;
-}
+
 .col-1{
-  width: calc( calc(100% / var(--col-count)) * 1);
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 calc( calc(100% / var(--col-count)) * 1);
+          flex: 1 0 calc( calc(100% / var(--col-count)) * 1);
 }
 
 .col-2{
-  width: calc( calc(100% / var(--col-count)) * 2);
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 calc( calc(100% / var(--col-count)) * 2);
+          flex: 1 0 calc( calc(100% / var(--col-count)) * 2);
 }
 
 .col-3{
-  width: calc( calc(100% / var(--col-count)) * 3);
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 calc( calc(100% / var(--col-count)) * 3);
+          flex: 1 0 calc( calc(100% / var(--col-count)) * 3);
 }
 
 .col-4{
-  width: calc( calc(100% / var(--col-count)) * 4);
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 calc( calc(100% / var(--col-count)) * 4);
+          flex: 1 0 calc( calc(100% / var(--col-count)) * 4);
 }
 
 .col-5{
-  width: calc( calc(100% / var(--col-count)) * 5);
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 calc( calc(100% / var(--col-count)) * 5);
+          flex: 1 0 calc( calc(100% / var(--col-count)) * 5);
 }
 
 .col-6{
-  width: calc( calc(100% / var(--col-count)) * 6);
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 calc( calc(100% / var(--col-count)) * 6);
+          flex: 1 0 calc( calc(100% / var(--col-count)) * 6);
 }
 
 .col-7{
-  width: calc( calc(100% / var(--col-count)) * 7);
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 calc( calc(100% / var(--col-count)) * 7);
+          flex: 1 0 calc( calc(100% / var(--col-count)) * 7);
 }
 
 .col-8{
-  width: calc( calc(100% / var(--col-count)) * 8);
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 calc( calc(100% / var(--col-count)) * 8);
+          flex: 1 0 calc( calc(100% / var(--col-count)) * 8);
 }
 
 .col-9{
-  width: calc( calc(100% / var(--col-count)) * 9);
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 calc( calc(100% / var(--col-count)) * 9);
+          flex: 1 0 calc( calc(100% / var(--col-count)) * 9);
 }
 
 .col-10{
-  width: calc( calc(100% / var(--col-count)) * 10);
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 calc( calc(100% / var(--col-count)) * 10);
+          flex: 1 0 calc( calc(100% / var(--col-count)) * 10);
 }
 
 .col-11{
-  width: calc( calc(100% / var(--col-count)) * 11);
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 calc( calc(100% / var(--col-count)) * 11);
+          flex: 1 0 calc( calc(100% / var(--col-count)) * 11);
 }
 
 .col-12{
-  width: calc( calc(100% / var(--col-count)) * 12);
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 calc( calc(100% / var(--col-count)) * 12);
+          flex: 1 0 calc( calc(100% / var(--col-count)) * 12);
 }
 
-/*
 @supports (display:grid) {
   .grid {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-auto-rows: 200px;
+    grid-template-columns: repeat(var(--col-count), 1fr);
+    grid-auto-rows: auto;
     grid-gap: var(--grid-gap);
   }
-  [class^="col-"] {
+  [class*="col-"] {
     background-color: brown;
   }
   .col-1 {
@@ -258,8 +265,46 @@ https://vladocar.github.io/SMART-CSS-GRID/smart-grid.css
   .col-12 {
     grid-column: auto/span 12;
   }
-}*/.m0 {
+
+  @media (max-width:50rem){
+    [class*="col-"] {
+      grid-column: auto/span var(--col-count, 12);
+    }
+  }
+}.fullw{
+    width: 100%;
+}
+.m0 {
     margin: 0;
+}
+
+.m025 {
+    margin: .25rem;
+}
+
+.m05 {
+    margin: .5rem;
+}
+
+.m075 {
+    margin: .75rem;
+}
+
+.m1 {
+    margin: 1rem;
+}
+
+.m125 {
+    margin: 1.25rem;
+}
+.m15 {
+    margin: 1.5rem;
+}
+.m175 {
+    margin: 1.75rem;
+}
+.m2 {
+    margin: 2rem;
 }
 
 .mt0 {
@@ -652,6 +697,35 @@ https://vladocar.github.io/SMART-CSS-GRID/smart-grid.css
     padding: 0;
 }
 
+.p025 {
+    padding: .25rem;
+}
+
+.p05 {
+    padding: .5rem;
+}
+
+.p075 {
+    padding: .75rem;
+}
+
+.p1 {
+    padding: 1rem;
+}
+
+.p125 {
+    padding: 1.25rem;
+}
+.p15 {
+    padding: 1.5rem;
+}
+.p175 {
+    padding: 1.75rem;
+}
+.p2 {
+    padding: 2rem;
+}
+
 .pt0 {
     padding-top: 0;
 }
@@ -939,7 +1013,7 @@ https://vladocar.github.io/SMART-CSS-GRID/smart-grid.css
 }
 
 .ptb3 {
-    padding-top: 3;
+    padding-top: 3rem;
     padding-bottom: 3rem;
 }
 
@@ -1646,6 +1720,22 @@ button.disabled:not([disabled])::after {
     text-transform: uppercase
 }
 
+.fs05 {
+    font-size: .5rem;
+}
+.fs06 {
+    font-size: .6rem;
+}
+.fs07 {
+    font-size: .7rem;
+}
+.fs08 {
+    font-size: .8rem;
+}
+.fs09 {
+    font-size: .9rem;
+}
+
 .fs1 {
     font-size: 1rem;
 }
@@ -1715,8 +1805,8 @@ button.disabled:not([disabled])::after {
 }
 
 ::-moz-selection {
-    color: var(--selection-color, red);
-    background: var(--selection-color, red);
+    color: var(--selection-color);
+    background: var(--selection-color);
     /* Gecko Browsers */
 }/*asd: var(--name, fallback)*/
 
@@ -1724,36 +1814,42 @@ h1{
     font-size: var(--h1-size);
     color: var(--h1-color);
     margin: var(--h1-margin);
+    line-height: var(--h1-lineh);
 }
 
 h2{
     font-size: var(--h2-size);
     color: var(--h2-color);
     margin: var(--h2-margin);
+    line-height: var(--h2-lineh);
 }
 
 h3{
     font-size: var(--h3-size);
     color: var(--h3-color);
     margin: var(--h3-margin);
+    line-height: var(--h3-lineh);
 }
 
 h4{
     font-size: var(--h4-size);
     color: var(--h4-color);
     margin: var(--h4-margin);
+    line-height: var(--h4-lineh);
 }
 
 h5{
     font-size: var(--h5-size);
     color: var(--h5-color);
     margin: var(--h5-margin);
+    line-height: var(--h5-lineh);
 }
 
 h6{
     font-size: var(--h6-size);
     color: var(--h6-color);
     margin: var(--h6-margin);
+    line-height: var(--h6-lineh);
 }button,
 .btn {
     border: 0;
@@ -1771,7 +1867,10 @@ h6{
     background-color: var(--btn-bg);
     border: var(--btn-border);
     border-radius: var(--btn-bradius);
-}.img{
+}img{
+    width: 100%;
+}
+.img{
     width: 100%;
     height: auto;
     -o-object-fit: cover;
@@ -1844,24 +1943,14 @@ h6{
   top: 50%;
   width: .8rem;
   z-index: 1;
-}.test{
-    background: rgba(0,0,255,0.75);
-    border-radius: 50%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: 15rem;
-    height: 15rem;
+}.icon{
+    width: 20px;
 }
-.test:hover, .test:focus{
-   
-    -webkit-animation: radial-pulse 1s infinite;
-   
-            animation: radial-pulse 1s infinite;
+.hover{
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.hover:hover, .hover:focus{
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
 }
