@@ -2,12 +2,15 @@
 @import "./config.css";
 @import "./grid.css";
 @import "./spacing.css";
+@import "./sizing.css";
 @import "./flex-utils.css";
 @import "./a11y.css";
 @import "./text.css";
 @import "./headings.css";
 @import "./buttons.css";
+@import "./links.css";
 @import "./images.css";
+@import "./tables.css";
 @import "./animations.css";
 
 

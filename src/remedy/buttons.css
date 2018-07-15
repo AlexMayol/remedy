@@ -1,18 +1,43 @@
 button,
 .btn {
-    border: 0;
-    background-color: transparent;
-    border-radius: 0;
-    color: black;
-    margin: 0;
-    padding: 0;
-}
-
-.btn {
     padding: var(--btn-pad);
     margin: var(--btn-marg);
     color: var(--btn-color);
     background-color: var(--btn-bg);
     border: var(--btn-border);
     border-radius: var(--btn-bradius);
+    cursor: var(--btn-cursor);
+
+    transition: var(--btn-transition);
+}
+
+button:hover, button:focus, .btn:hover, .btn:focus{
+    color:var(--btn-hover-color);
+    background-color: var(--btn-hover-bg);
+}
+.success{
+    color: var(--btn-success-color);
+    background-color: var(--btn-success-bg);
+}
+.success:hover, .success:focus{
+    color:var(--btn-success-hover-color);
+    background-color: var(--btn-success-hover-bg);
+}
+
+.danger{
+    color: var(--btn-danger-color);
+    background-color: var(--btn-danger-bg);
+}
+.danger:hover, .danger:focus{
+    color:var(--btn-danger-hover-color);
+    background-color: var(--btn-danger-hover-bg);
+}
+
+summary{
+    color:var(--summary-color);
+    background-color: var(--summary-bg);
+}
+details{
+    color:var(--details-color);
+background-color: var(--details-bg);
 }

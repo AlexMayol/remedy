@@ -5,6 +5,7 @@
   "main": "remedy.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"parcel src/index.html --open",
     "build": "parcel build src/index.html -d dist --no-cache"
   },
   "keywords": [
@@ -21,9 +22,9 @@
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^8.6.2",
-    "node-sass": "^4.7.2"
+    "node-sass": "^4.9.2"
   },
   "dependencies": {
-    "parcel-bundler": "^1.8.1"
+    "parcel-bundler": "^1.9.4"
   }
 }

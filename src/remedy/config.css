@@ -1,5 +1,6 @@
 :root {
-    font-size: 100%; /*Takes browser's font-size, defined by the user*/
+    font-size: 100%;
+    /*Takes browser's font-size, defined by the user*/
     --bg-color: coral;
     --text-color: black;
     --link-color: blue;
@@ -38,21 +39,53 @@
     --btn-bg: blue;
     --btn-border: none;
     --btn-bradius: 4px;
+    --btn-cursor: auto;
+    --btn-hover-color:white;
+    --btn-hover-bg: red;
+    --btn-transition: all .25s ease;
+
+    --btn-success-color: white;
+    --btn-success-bg: green;
+    --btn-success-hover-color: white;
+    --btn-success-hover-bg: rgb(3, 51, 3);
+
+    --btn-danger-color: white;
+    --btn-danger-bg: red;
+    --btn-danger-hover-color: white;
+    --btn-danger-hover-bg: rgb(175, 31, 103);
+
+    --summary-color: white;
+    --summary-bg:#7c6868;
+    --details-color: white;
+    --details-bg:#4c3da3;
+    /*----Links-----*/
+    --a-color: red;
+    --a-bg: transparent;
+    --a-underline: none;
     /*-----Grid------*/
     --col-count: 12;
     --container-margin: 0 auto;
     --container-width: 90%;
-    --container-bg:#8bf8ff;
+    --container-bg: #8bf8ff;
     --grid-gap: 1.5rem;
     /*-----Text-------*/
     --selection-color: white;
     --selection-bg: rgb(10, 27, 21);
-    /*----Screen size----*/
-    --large:70rem;
-    --medium:50rem;
-    --small:40rem;
+    /*----Tables----*/
+    --table-width: 100%;
+    --table-margin: 1rem 0;
+    --table-padding: 1rem;
+    --table-border: 2px solid #f7f7f9;
 
-  
+    --thead-align:center;
+    --thead-color:black;
+    --thead-bg:white;
+    --table-striped-bg:  rgba(0,0,0,.05);
+    --td-padding:.25rem;
+    /*----Screen size----*/
+    --large: 70rem;
+    --medium: 50rem;
+    --small: 40rem;
 }
 
 /*a11y purposes*/

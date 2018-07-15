@@ -1,0 +1,6 @@
+a{
+    color: var(--a-color);
+    background-color: var(--a-bg);
+    text-decoration: var(--a-underline);
+    
+}

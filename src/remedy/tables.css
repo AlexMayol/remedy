@@ -1,0 +1,17 @@
+table{
+    width: var(--table-width);
+    margin: var(--table-margin);
+    padding: var(--table-padding);
+    border: var(--table-border);
+}
+thead{
+    text-align: var(--thead-align);
+    color:  var(--thead-color);
+    background-color:  var(--thead-bg);
+}
+.striped tbody tr:nth-of-type(odd){
+    background-color:var(--table-striped-bg);
+}
+td{
+    padding: var(--td-padding);
+}
