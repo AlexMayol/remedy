@@ -1,111 +1,111 @@
 .bold {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .italic {
-    font-style: italic;
+  font-style: italic;
 }
 
 .text-center {
-    text-align: center;
+  text-align: center;
 }
 
 .text-justify {
-    text-align: justify;
+  text-align: justify;
 }
 
 .text-left {
-    text-align: left;
+  text-align: left;
 }
 
 .text-right {
-    text-align: right;
+  text-align: right;
 }
 
 .caps {
-    text-transform: uppercase
+  text-transform: uppercase;
 }
 
 .fs05 {
-    font-size: .5rem;
+  font-size: 0.5rem;
 }
 .fs06 {
-    font-size: .6rem;
+  font-size: 0.6rem;
 }
 .fs07 {
-    font-size: .7rem;
+  font-size: 0.7rem;
 }
 .fs08 {
-    font-size: .8rem;
+  font-size: 0.8rem;
 }
 .fs09 {
-    font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 .fs1 {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 .fs125 {
-    font-size: 1.25rem;
+  font-size: 1.25rem;
 }
 
 .fs15 {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .fs2 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .fs225 {
-    font-size: 2.25rem;
+  font-size: 2.25rem;
 }
 
 .fs250 {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
 .fs275 {
-    font-size: 2.75rem;
+  font-size: 2.75rem;
 }
 
 .fs3 {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
 .fs4 {
-    font-size: 4rem;
+  font-size: 4rem;
 }
 
 .fs5 {
-    font-size: 5rem;
+  font-size: 5rem;
 }
 
 .fs6 {
-    font-size: 6rem;
+  font-size: 6rem;
 }
 
 .fs7 {
-    font-size: 7rem;
+  font-size: 7rem;
 }
 
 .fs8 {
-    font-size: 8rem;
+  font-size: 8rem;
 }
 
 .fs9 {
-    font-size: 9rem;
+  font-size: 9rem;
 }
 
 ::selection {
-    color: var(--selection-color);
-    background: var(--selection-color);
-    /* WebKit/Blink Browsers */
+  color: var(--selection-color);
+  background: var(--selection-color);
+  /* WebKit/Blink Browsers */
 }
 
 ::-moz-selection {
-    color: var(--selection-color);
-    background: var(--selection-color);
-    /* Gecko Browsers */
+  color: var(--selection-color);
+  background: var(--selection-color);
+  /* Gecko Browsers */
 }
