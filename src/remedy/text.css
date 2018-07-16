@@ -29,15 +29,19 @@
 .fs05 {
   font-size: 0.5rem;
 }
+
 .fs06 {
   font-size: 0.6rem;
 }
+
 .fs07 {
   font-size: 0.7rem;
 }
+
 .fs08 {
   font-size: 0.8rem;
 }
+
 .fs09 {
   font-size: 0.9rem;
 }
@@ -96,6 +100,28 @@
 
 .fs9 {
   font-size: 9rem;
+}
+
+.sr-only{
+
+    width: 0px;
+    height: 0px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+.sr-only.sr-only-focus:focus{
+    width: auto;
+    height: auto;
+    clip: none;
+    font:inherit;
+    color:inherit;
+
 }
 
 ::selection {
