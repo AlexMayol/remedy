@@ -1,0 +1,10 @@
+select{
+    padding: var(--select-padding);
+    border-radius: var(--select-border-radius);
+}
+option{
+    padding: var(--option-padding);
+    color:var(--option-color);
+    background-color:var(--option-bg); 
+
+}

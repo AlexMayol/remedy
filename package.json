@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev":"parcel src/index.html --open",
-    "build": "parcel build src/index.html -d dist --no-cache"
+    "build": "parcel build src/index.html -d dist --no-cache",
+    "remedy-dev":"parcel src/remedy/remedy.css --open",
+    "remedy":"parcel build src/remedy/remedy.css -d dist --no-cache"  
   },
   "keywords": [
     "css",

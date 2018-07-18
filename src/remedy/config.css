@@ -20,12 +20,19 @@
     --h4-color: green;
     --h5-color: green;
     --h6-color: green;
-    --h1-margin: 1rem 0;
-    --h2-margin: 1rem 0;
-    --h3-margin: 1rem 0;
-    --h4-margin: 1rem 0;
-    --h5-margin: 1rem 0;
-    --h6-margin: 1rem 0;
+    --h1-margin: 0;
+    --h2-margin: 0;
+    --h3-margin: 0;
+    --h4-margin: 0;
+    --h5-margin: 0;
+    --h6-margin: 0;
+    --h1-padding: 1rem;
+    --h2-padding: 1rem;
+    --h3-padding: 1rem;
+    --h4-padding: 1rem;
+    --h5-padding: 1rem;
+    --h6-padding: 1rem;
+
     --h1-lineh: 1;
     --h2-lineh: 1;
     --h3-lineh: 1;
@@ -40,24 +47,21 @@
     --btn-border: none;
     --btn-bradius: 4px;
     --btn-cursor: auto;
-    --btn-hover-color:white;
+    --btn-hover-color: white;
     --btn-hover-bg: red;
     --btn-transition: all .25s ease;
-
     --btn-success-color: white;
     --btn-success-bg: green;
     --btn-success-hover-color: white;
     --btn-success-hover-bg: rgb(3, 51, 3);
-
     --btn-danger-color: white;
     --btn-danger-bg: red;
     --btn-danger-hover-color: white;
     --btn-danger-hover-bg: rgb(175, 31, 103);
-
     --summary-color: white;
-    --summary-bg:#7c6868;
+    --summary-bg: #7c6868;
     --details-color: white;
-    --details-bg:#4c3da3;
+    --details-bg: #4c3da3;
     /*----Links-----*/
     --a-color: red;
     --a-bg: transparent;
@@ -71,17 +75,23 @@
     /*-----Text-------*/
     --selection-color: white;
     --selection-bg: rgb(10, 27, 21);
+    /*-----Forms----*/
+    --select-padding: .25rem;
+    --select-border-radius:3px;
+    --option-padding:.25rem;
+    --option-bg:white;
+    --option-color:black;
+
     /*----Tables----*/
     --table-width: 100%;
     --table-margin: 1rem 0;
     --table-padding: 1rem;
     --table-border: 2px solid #f7f7f9;
-
-    --thead-align:center;
-    --thead-color:black;
-    --thead-bg:white;
-    --table-striped-bg:  rgba(0,0,0,.05);
-    --td-padding:.25rem;
+    --thead-align: center;
+    --thead-color: black;
+    --thead-bg: white;
+    --table-striped-bg: rgba(0, 0, 0, .05);
+    --td-padding: .25rem;
     /*----Screen size----*/
     --large: 70rem;
     --medium: 50rem;
@@ -91,8 +101,15 @@
 /*a11y purposes*/
 
 html {
+    width: 100%;
+    height: auto;
     letter-spacing: .12em;
     line-height: 1.5rem;
     letter-spacing: .05rem;
     word-spacing: .16rem;
+}
+body{
+    width: 100%;
+    height: auto;
+    background: var(--body-bg);
 }
