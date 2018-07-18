@@ -101,15 +101,8 @@
 /*a11y purposes*/
 
 html {
-    width: 100%;
-    height: auto;
-    letter-spacing: .12em;
-    line-height: 1.5rem;
-    letter-spacing: .05rem;
-    word-spacing: .16rem;
-}
-body{
-    width: 100%;
-    height: auto;
-    background: var(--body-bg);
+  letter-spacing: 0.12em;
+  line-height: 1.5rem;
+  letter-spacing: 0.05rem;
+  word-spacing: 0.16rem;
 }
