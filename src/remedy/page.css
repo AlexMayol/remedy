@@ -1,0 +1,23 @@
+*, *::before, *::after {
+    box-sizing: border-box
+}
+
+html {
+    width:var(--html-width);
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    -webkit-text-size-adjust: 100%;
+    letter-spacing: var(--letter-spacing);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing);
+    word-spacing: var(--word-spacing);
+
+
+}
+
+body {
+    width: var(--body-width);
+    height: var(--body-height);
+    margin: var(--body-margin);
+    background: var(--body-bg);
+}

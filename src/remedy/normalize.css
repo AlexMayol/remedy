@@ -1,16 +1,3 @@
- *, ::before, ::afer{
-  box-sizing: border-box
- }
- html {
-    line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
-  }
-  
-  body {
-    margin: 0;
-  }
-
-  
   pre {
     font-family: monospace, monospace;
     font-size: 1em;

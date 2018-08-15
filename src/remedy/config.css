@@ -1,108 +1,107 @@
 :root {
-    font-size: 100%;
-    /*Takes browser's font-size, defined by the user*/
-    --bg-color: coral;
-    --text-color: black;
-    --link-color: blue;
-    --border-radius-sm: 2px;
-    --border-radius-md: 4px;
-    --border-radius-lg: 6px;
-    /*----Headings----*/
-    --h1-size: 2.5rem;
-    --h2-size: 2rem;
-    --h3-size: 1.75rem;
-    --h4-size: 1.5rem;
-    --h5-size: 1.25rem;
-    --h6-size: 1rem;
-    --h1-color: green;
-    --h2-color: green;
-    --h3-color: green;
-    --h4-color: green;
-    --h5-color: green;
-    --h6-color: green;
-    --h1-margin: 0;
-    --h2-margin: 0;
-    --h3-margin: 0;
-    --h4-margin: 0;
-    --h5-margin: 0;
-    --h6-margin: 0;
-    --h1-padding: 1rem;
-    --h2-padding: 1rem;
-    --h3-padding: 1rem;
-    --h4-padding: 1rem;
-    --h5-padding: 1rem;
-    --h6-padding: 1rem;
+  /* ----Page---- */
+  --font-size: 100%;
+  --font-family: 'Lato', sans-serif;
+  --letter-spacing: 0.12em;
+  --line-height: 1.5rem;
+  --letter-spacing: 0.05rem;
+  --word-spacing: 0.16rem;
+  --html-width: 100%;
+  --body-width:100%;
+  --body-height:100%;
+  --body-margin:100%;
+  --body-bg:none;
 
-    --h1-lineh: 1;
-    --h2-lineh: 1;
-    --h3-lineh: 1;
-    --h4-lineh: 1;
-    --h5-lineh: 1;
-    --h6-lineh: 1;
-    /*----Buttons------*/
-    --btn-marg: 1rem 0;
-    --btn-pad: .5rem .75rem;
-    --btn-color: white;
-    --btn-bg: blue;
-    --btn-border: none;
-    --btn-bradius: 4px;
-    --btn-cursor: auto;
-    --btn-hover-color: white;
-    --btn-hover-bg: red;
-    --btn-transition: all .25s ease;
-    --btn-success-color: white;
-    --btn-success-bg: green;
-    --btn-success-hover-color: white;
-    --btn-success-hover-bg: rgb(3, 51, 3);
-    --btn-danger-color: white;
-    --btn-danger-bg: red;
-    --btn-danger-hover-color: white;
-    --btn-danger-hover-bg: rgb(175, 31, 103);
-    --summary-color: white;
-    --summary-bg: #7c6868;
-    --details-color: white;
-    --details-bg: #4c3da3;
-    /*----Links-----*/
-    --a-color: red;
-    --a-bg: transparent;
-    --a-underline: none;
-    /*-----Grid------*/
-    --col-count: 12;
-    --container-margin: 0 auto;
-    --container-width: 90%;
-    --container-bg: #8bf8ff;
-    --grid-gap: 1.5rem;
-    /*-----Text-------*/
-    --selection-color: white;
-    --selection-bg: rgb(10, 27, 21);
-    /*-----Forms----*/
-    --select-padding: .25rem;
-    --select-border-radius:3px;
-    --option-padding:.25rem;
-    --option-bg:white;
-    --option-color:black;
-
-    /*----Tables----*/
-    --table-width: 100%;
-    --table-margin: 1rem 0;
-    --table-padding: 1rem;
-    --table-border: 2px solid #f7f7f9;
-    --thead-align: center;
-    --thead-color: black;
-    --thead-bg: white;
-    --table-striped-bg: rgba(0, 0, 0, .05);
-    --td-padding: .25rem;
-    /*----Screen size----*/
-    --large: 70rem;
-    --medium: 50rem;
-    --small: 40rem;
-}
-
-/*a11y purposes*/
-
-html {
-  letter-spacing: 0.12em;
-  line-height: 1.5rem;
-  letter-spacing: 0.05rem;
-  word-spacing: 0.16rem;
+  /*----Headings----*/
+  --h1-size: 2.5rem;
+  --h2-size: 2rem;
+  --h3-size: 1.75rem;
+  --h4-size: 1.5rem;
+  --h5-size: 1.25rem;
+  --h6-size: 1rem;
+  --h1-color: green;
+  --h2-color: green;
+  --h3-color: green;
+  --h4-color: green;
+  --h5-color: green;
+  --h6-color: green;
+  --h1-margin: 0;
+  --h2-margin: 0;
+  --h3-margin: 0;
+  --h4-margin: 0;
+  --h5-margin: 0;
+  --h6-margin: 0;
+  --h1-padding: 1rem;
+  --h2-padding: 1rem;
+  --h3-padding: 1rem;
+  --h4-padding: 1rem;
+  --h5-padding: 1rem;
+  --h6-padding: 1rem;
+  --h1-lineh: 1;
+  --h2-lineh: 1;
+  --h3-lineh: 1;
+  --h4-lineh: 1;
+  --h5-lineh: 1;
+  --h6-lineh: 1;
+  /*----Buttons------*/
+  --btn-marg: 1rem 0;
+  --btn-pad: .5rem .75rem;
+  --btn-color: white;
+  --btn-bg: blue;
+  --btn-border: none;
+  --btn-bradius: 4px;
+  --btn-cursor: auto;
+  --btn-hover-color: white;
+  --btn-hover-bg: red;
+  --btn-transition: all .25s ease;
+  --btn-success-color: white;
+  --btn-success-bg: green;
+  --btn-success-hover-color: white;
+  --btn-success-hover-bg: rgb(3, 51, 3);
+  --btn-danger-color: white;
+  --btn-danger-bg: red;
+  --btn-danger-hover-color: white;
+  --btn-danger-hover-bg: rgb(175, 31, 103);
+  --btn-disabled-bg: #E6E6E6;
+  --btn-disabled-color: rgb(66, 62, 62);
+  --summary-color: white;
+  --summary-bg: #7c6868;
+  --details-color: white;
+  --details-bg: #4c3da3;
+  /*----Links-----*/
+  --a-color: red;
+  --a-bg: transparent;
+  --a-underline: none;
+  /*-----Grid------*/
+  --col-count: 12;
+  --container-margin: 0 auto;
+  --container-width: 90%;
+  --container-bg: #8bf8ff;
+  --grid-gap: 1.5rem;
+  /*-----Text-------*/
+  --selection-color: white;
+  --selection-bg: rgb(10, 27, 21);
+  /*-----Forms----*/
+  --select-padding: .25rem;
+  --select-border-radius: 3px;
+  --option-padding: .25rem;
+  --option-bg: white;
+  --option-color: black;
+  /*----Tables----*/
+  --table-width: 100%;
+  --table-margin: 1rem 0;
+  --table-padding: 1rem;
+  --table-border: 2px solid #f7f7f9;
+  --table-border-spacing: 0;
+  --thead-align: center;
+  --thead-color: black;
+  --thead-bg: white;
+  --table-striped-bg: rgba(0, 0, 0, .05);
+  --table-bordered: 1px solid #cbcbcb;
+  --table-horizontal-border: 1px solid #cbcbcb;
+  --td-padding: .25rem;
+  /*----Screen size----*/
+  --large: 70rem;
+  --medium: 50rem;
+  --small: 40rem;
 }

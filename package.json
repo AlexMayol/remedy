@@ -4,7 +4,6 @@
   "description": "A CSS framework based on responsie font size and rem/em units.",
   "main": "remedy.css",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev":"parcel src/index.html --open",
     "build": "parcel build src/index.html -d dist --no-cache",
     "remedy-dev":"parcel src/remedy/remedy.css --open",

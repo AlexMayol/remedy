@@ -24,28 +24,9 @@
     height: 100%;
 }
 
-.maxh-25{
-    height: 25%;
+.w-auto{
+    width: auto;
 }
-.maxh-50{
-    height: 50%;
-}
-.maxh-75{
-    height: 75%;
-}
-.maxh-100{
-    height: 100%;
-}
-
-.maxh-25{
-    height: 25%;
-}
-.maxh-50{
-    height: 50%;
-}
-.maxh-75{
-    height: 75%;
-}
-.maxh-100{
-    height: 100%;
+.h-auto{
+    height: auto;
 }

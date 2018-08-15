@@ -22,8 +22,14 @@
   text-align: right;
 }
 
-.caps {
+.uppercase {
   text-transform: uppercase;
+}
+.lowercase{
+  text-transform:lowercase;
+}
+.capitalize{
+text-transform: capitalize;
 }
 
 .fs05 {
@@ -132,6 +138,6 @@
 
 ::-moz-selection {
   color: var(--selection-color);
-  background: var(--selection-color);
+  background: var(--selection-bg);
   /* Gecko Browsers */
 }

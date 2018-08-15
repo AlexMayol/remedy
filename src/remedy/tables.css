@@ -3,6 +3,7 @@ table{
     margin: var(--table-margin);
     padding: var(--table-padding);
     border: var(--table-border);
+    border-spacing: var(--table-border-spacing);
 }
 thead{
     text-align: var(--thead-align);
@@ -11,6 +12,12 @@ thead{
 }
 .striped tbody tr:nth-of-type(odd){
     background-color:var(--table-striped-bg);
+}
+.border td{
+    border: var(--table-bordered);
+}
+.horizontal-border td{
+    border-bottom:var(--table-horizontal-border);
 }
 td{
     padding: var(--td-padding);
