@@ -20,4 +20,5 @@ body {
     height: var(--body-height);
     margin: var(--body-margin);
     background: var(--body-bg);
+    color: var(--body-color);
 }

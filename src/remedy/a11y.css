@@ -543,3 +543,26 @@ button.disabled:not([disabled])::after {
 [data-toggle="dropdown"]:not([aria-haspopup])::after {
     content: 'Indicate the hidden menu with aria-haspopup' !important;
 }
+
+
+.sr-only{
+
+    width: 0px;
+    height: 0px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+.sr-only.sr-only-focus:focus{
+    width: auto;
+    height: auto;
+    clip: none;
+    font:inherit;
+    color:inherit;
+
+}

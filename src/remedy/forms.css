@@ -1,6 +1,7 @@
 select{
     padding: var(--select-padding);
     border-radius: var(--select-border-radius);
+	background-color:var(--select-bg); 
 }
 option{
     padding: var(--option-padding);

@@ -8,7 +8,6 @@ https://vladocar.github.io/SMART-CSS-GRID/smart-grid.css
 .container {
     margin: var(--container-margin);
     width: var(--container-width);
-    background-color: var(--container-bg);
 }
 
 .grid {
