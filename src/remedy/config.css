@@ -7,12 +7,11 @@
   --letter-spacing: 0.05rem;
   --word-spacing: 0.16rem;
   --html-width: 100%;
-  --body-width:100%;
-  --body-height:100%;
-  --body-margin:0;
-  --body-bg:none;
-  --body-color:#1d2120;
-
+  --body-width: 100%;
+  --body-height: 100%;
+  --body-margin: 0;
+  --body-bg: none;
+  --body-color: #1d2120;
   /*----Headings----*/
   --h1-size: 2.5rem;
   --h2-size: 2rem;
@@ -26,6 +25,12 @@
   --h4-color: black;
   --h5-color: black;
   --h6-color: black;
+  --h1-bgcolor: transparent;
+  --h2-bgcolor: transparent;
+  --h3-bgcolor: transparent;
+  --h4-bgcolor: transparent;
+  --h5-bgcolor: transparent;
+  --h6-bgcolor: transparent;
   --h1-margin: 0;
   --h2-margin: 0;
   --h3-margin: 0;

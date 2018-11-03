@@ -1,6 +1,7 @@
 h1{
     font-size: var(--h1-size);
     color: var(--h1-color);
+    background-color: var(--h1-bgcolor);
     margin: var(--h1-margin);
     padding: var(--h1-padding);
     line-height: var(--h1-lineh);
@@ -9,6 +10,7 @@ h1{
 h2{
     font-size: var(--h2-size);
     color: var(--h2-color);
+    background-color: var(--h2-bgcolor);
     margin: var(--h2-margin);
     padding: var(--h2-padding);
     line-height: var(--h2-lineh);
@@ -17,6 +19,7 @@ h2{
 h3{
     font-size: var(--h3-size);
     color: var(--h3-color);
+    background-color: var(--h3-bgcolor);
     margin: var(--h3-margin);
     padding: var(--h3-padding);
     line-height: var(--h3-lineh);
@@ -25,6 +28,7 @@ h3{
 h4{
     font-size: var(--h4-size);
     color: var(--h4-color);
+    background-color: var(--h4-bgcolor);
     margin: var(--h4-margin);
     padding: var(--h4-padding);
     line-height: var(--h4-lineh);
@@ -33,6 +37,7 @@ h4{
 h5{
     font-size: var(--h5-size);
     color: var(--h5-color);
+    background-color: var(--h5-bgcolor);
     margin: var(--h5-margin);
     padding: var(--h5-padding);
     line-height: var(--h5-lineh);
@@ -41,6 +46,7 @@ h5{
 h6{
     font-size: var(--h6-size);
     color: var(--h6-color);
+    background-color: var(--h6-bgcolor);
     margin: var(--h6-margin);
     padding: var(--h6-padding);
     line-height: var(--h6-lineh);
